@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        svg {
+            border: 1px solid black;
+        }
+        #button1 {
+            position: absolute;
+            top: 480px; /* Adjust the top position as needed */
+            left: 20px; /* Adjust the left position as needed */
+        }
+        #button2 {
+            position: absolute;
+            top: 540px; /* Adjust the top position as needed */
+            left: 20px; /* Adjust the left position as needed */
+        }
+        .node {
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .link {
+            stroke-opacity: 0.6;
+        }
+
+        .legend {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        .highlight {
+            stroke: #f00;
+            stroke-width: 3px;
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: match-parent;
+            width: 510px;
+            height: 20px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: rgb(219, 220, 220);
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }  
+    </style>
+
+</head>
+<body>
+    <svg width="750" height="600"></svg>
+    <button id="button1">标记核心资产</button>
+    <button id="button2">显示关键链路</button>
+    <script type="text/javascript" src="./main_view.js"></script>
+</body>
+</html>
+
