@@ -32,6 +32,14 @@ net_limit = {
     "large": {"node": 3000, "edge": 6000, "corelimit": 20, "filterbase": 70},
 }
 
+scale = {
+    "1":"small",
+    "2":"medium",
+    "3":"medium",
+    "4":"large",
+    "5":"large",
+}
+
 evidence = {
     "1": [
         "Domain_c58c149eec59bb14b0c102a0f303d4c20366926b5c3206555d2937474124beb9",
@@ -66,4 +74,5 @@ rules = {
     "jump_limit": jump_limit,
     "net_limit": net_limit,
     "evidence": evidence,
+    "scale": scale,
 }

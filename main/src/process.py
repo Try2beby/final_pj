@@ -91,7 +91,7 @@ def set_core(G,link_priority=rules["link_priority"]):
                 num_ip += 1
                 
         # set is_core for node
-        if num_weak_link / len(G[node]) < 0.5:
+        if num_weak_link / len(G.nodes[node]) < 0.5:
             if G.nodes[node]["type"] == "Domain":
                 if num_ip < 2:
                     G.nodes[node]["is_core"] = True
@@ -174,7 +174,7 @@ def filter_subgraph(
     print("Removing nodes by pagerank and betweenness centrality...")
     pr = nx.pagerank(G)
     sorted_pr = sorted(pr.items(), key=lambda x: x[1])
-    print("len(sorted_pr): ", len(sorted_pr))
+    # print("len(sorted_pr): ", len(sorted_pr))
     G_dir = G.to_directed()
     bc = nx.edge_betweenness_centrality(G_dir)
     # print first element of bc
@@ -200,15 +200,15 @@ def filter_subgraph(
     G.remove_nodes_from(list(nodes_to_remove))
     print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
     
-    # keep nodes with is_core = True
-    print("Keeping nodes with is_core = True...")
-    nodes_to_remove = set()
-    for node in G.nodes():
-        if G.nodes[node]["is_core"] != True:
-            nodes_to_remove.add(node)
-    # remove nodes
-    G.remove_nodes_from(list(nodes_to_remove))
-    print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+    # # keep nodes with is_core = True
+    # print("Keeping nodes with is_core = True...")
+    # nodes_to_remove = set()
+    # for node in G.nodes():
+    #     if G.nodes[node]["is_core"] != True:
+    #         nodes_to_remove.add(node)
+    # # remove nodes
+    # G.remove_nodes_from(list(nodes_to_remove))
+    # print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
     
     
     # remove isolated nodes
