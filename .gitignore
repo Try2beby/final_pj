@@ -2,7 +2,9 @@
 *.pdf
 *.zip
 refs/
-data/
+Node.csv
+Link.csv
+test*
 
 __pycache__/
 
