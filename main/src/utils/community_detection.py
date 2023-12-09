@@ -8,6 +8,7 @@ importlib.reload(process)
 
 cacheDir = "../data/cache/"
 communityDir = "../data/communities/"
+subgraphDir = "../data/community_subgraphs/"
 
 def get_communities(G):
     from networkx.algorithms.community import louvain_communities
@@ -69,6 +70,20 @@ def get_community_for_all_groups(G):
         with open(os.path.join(cacheDir, "group_" + group + ".json"), "w") as f:
             json.dump(data, f)
             
+def get_subgraph_for_all_communities(G):
+    # list all files in the directory
+    files = sorted(os.listdir(communityDir))
+
+    for file in files:
+        # open file
+        with open(communityDir + file, "r") as f:
+            community = json.load(f)
+            subgraph = G.subgraph(community)
+            # write subgraph to json file
+            data = nx.readwrite.json_graph.node_link_data(subgraph)
+            with open(os.path.join(subgraphDir, file), "w") as f:
+                json.dump(data, f)
+
 # if __name__ == "__main__":
 #     get_communities(G)
 #     get_community_for_all_groups(G)

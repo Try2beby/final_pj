@@ -4,7 +4,8 @@
 
 原始数据在 `Node.csv`, `Link.csv` 应该放在该路径下。（这两个文件未被添加到 repo 中）
 
-- `communities` 存放了对原始图进行社区检测的结果，一共891个 community
+- `communities` 存放了对原始图进行社区检测的结果，一共891个 community。存放的数据为节点集
+- `community_subgraphs` 每个社区节点集对应的子图
 - `cache` 每个文件是：把单个团伙所有线索所在的 community 合并，得到的子图
   - 相比原数据，为每条边增加了 `weight`, 各个重要程度分别对应 `0.8 0.6 0.4 0.2`
 
