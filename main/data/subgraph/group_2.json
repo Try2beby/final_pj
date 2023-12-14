@@ -1,1 +1,48 @@
-{"directed": false, "multigraph": false, "graph": {}, "nodes": [{"name": "1b22e6e2c9", "type": "Cert", "is_core": true, "industry": null, "betweenness": 0.0, "pagerank": 0.25, "id": "Cert_1b22e6e2c9f9d7afd041a1a0ef2178dbaaf3248c4261496a382ff46520d55e71"}, {"name": "156.241.xxx.xxx", "type": "IP", "is_core": true, "industry": null, "betweenness": 0.0, "pagerank": 0.25, "id": "IP_400c19e584976ff2a35950659d4d148a3d146f1b71692468132b849b0eb8702c"}, {"name": "156.241.xxx.0/24", "type": "IP_C", "is_core": true, "industry": null, "betweenness": 0.0, "pagerank": 0.25, "id": "IP_CIDR_421753e1f9d50442ad058315e2ab1ba76104ebc39764039f788257df5dc643d4"}, {"name": "bbe15474b1", "type": "Cert", "is_core": true, "industry": null, "betweenness": 0.0, "pagerank": 0.25, "id": "Cert_bbe15474b14bdf9f8f8f401595e8a9c6285e844245946224bb11f58fc6196edf"}], "links": [{"weight": 0.4, "relation": "r_cert_chain", "source": "Cert_1b22e6e2c9f9d7afd041a1a0ef2178dbaaf3248c4261496a382ff46520d55e71", "target": "Cert_bbe15474b14bdf9f8f8f401595e8a9c6285e844245946224bb11f58fc6196edf"}, {"weight": 0.2, "relation": "r_cidr", "source": "IP_400c19e584976ff2a35950659d4d148a3d146f1b71692468132b849b0eb8702c", "target": "IP_CIDR_421753e1f9d50442ad058315e2ab1ba76104ebc39764039f788257df5dc643d4"}]}
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "45.114.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.0,
+            "pagerank": 0.25675708783778944,
+            "id": "IP_36b2ba5b0800d154ef3add5672b7561af9535edd92d2c3323c64880498b45a05"
+        },
+        {
+            "name": "9be5aee5cc.com",
+            "type": "Domain",
+            "is_core": false,
+            "industry": "[]",
+            "betweenness": 1.0,
+            "pagerank": 0.48648582432442095,
+            "id": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772"
+        },
+        {
+            "name": "45.114.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.0,
+            "pagerank": 0.25675708783778944,
+            "id": "IP_f9b588fa3410ab89fa0e50b011c9ac8ddfa4a3125ea3df13fa4598faa5e15f8a"
+        }
+    ],
+    "links": [
+        {
+            "weight": 4,
+            "relation": "r_dns_a",
+            "source": "IP_36b2ba5b0800d154ef3add5672b7561af9535edd92d2c3323c64880498b45a05",
+            "target": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772"
+        },
+        {
+            "weight": 4,
+            "relation": "r_dns_a",
+            "source": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772",
+            "target": "IP_f9b588fa3410ab89fa0e50b011c9ac8ddfa4a3125ea3df13fa4598faa5e15f8a"
+        }
+    ]
+}
