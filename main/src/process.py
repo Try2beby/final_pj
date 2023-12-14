@@ -106,41 +106,30 @@ def set_core(G,link_priority=rules["link_priority"]):
         
 
 def filter_subgraph(
-    G_org, countThreshold=100, countKeepPercent=0.2, pagerankCountThreshold=300
+    G_org, countThreshold=100, countKeepPercent=0.2,pagerankCountThreshold=300 ,pagerankQuantile=0.6
 ):
-    """Filter nodes in G.
-    1. For each node, classify its neighbors according to relation type and node type.
-       if there are more than `countThreshold` neighbors with the same relation type and node type,
-       randomly select `countKeepPercent` percent of them to keep.
-    2. Keep nodes with pagerank higher than `pagerankThreshold` or with degree higher than the average degree.
-
-    Args:
-        G_org (nx.Graph): Graph to filter.
-        countThreshold (int, optional): Threshold to classify neighbors. Defaults to 100.
-        countKeepPercent (float, optional): Percent of neighbors to keep. Defaults to 0.2.
-        pagerankThreshold (float, optional): Threshold of pagerank. Defaults to 0.001.
-    """
-    random.seed(0)
+    random.seed(42)
     G = G_org.copy()
 
     print("Filtering nodes...")
+    print("pagerankCountThreshold: ", pagerankCountThreshold)
     
-    # remove nodes with empty industry
-    print("Removing nodes with empty industry...")
-    nodes_to_remove = set()
-    for node in G.nodes():
-        if G.nodes[node]["type"] == "Domain":
-            try:
-                industry = G.nodes[node]["industry"]
-                if industry == "[]":
-                    # print("Domain node with empty industry: ", node)
-                    nodes_to_remove.add(node)
-            except:
-                # print("Domain node without industry: ", node)
-                nodes_to_remove.add(node)
-    # remove nodes
-    G.remove_nodes_from(list(nodes_to_remove))
-    print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+    # # remove nodes with empty industry
+    # print("Removing nodes with empty industry...")
+    # nodes_to_remove = set()
+    # for node in G.nodes():
+    #     if G.nodes[node]["type"] == "Domain":
+    #         try:
+    #             industry = G.nodes[node]["industry"]
+    #             if industry == "[]":
+    #                 # print("Domain node with empty industry: ", node)
+    #                 nodes_to_remove.add(node)
+    #         except:
+    #             # print("Domain node without industry: ", node)
+    #             nodes_to_remove.add(node)
+    # # remove nodes
+    # G.remove_nodes_from(list(nodes_to_remove))
+    # print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
 
 
     print("Removing nodes by count...")
@@ -169,36 +158,43 @@ def filter_subgraph(
     # remove nodes
     G.remove_nodes_from(list(nodes_to_remove))
     print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
-
-    # remove nodes according to pagerank and betweenness centrality
-    print("Removing nodes by pagerank and betweenness centrality...")
+    
+    
+    # remove nodes according to pagerank quantile
+    print("Removing nodes by pagerank quantile...")
     pr = nx.pagerank(G)
-    sorted_pr = sorted(pr.items(), key=lambda x: x[1])
-    # print("len(sorted_pr): ", len(sorted_pr))
-    G_dir = G.to_directed()
-    bc = nx.edge_betweenness_centrality(G_dir)
-    # print first element of bc
-    # print("First element of bc: ", list(bc.items())[0])
-    # compute average betweenness centrality
-    bc_avg = sum(bc.values()) / len(bc)
-    nodes_to_remove = set()
-    # remove nodes with low pagerank, if the node have a link with bc higher than average, keep it
-    # remove until the number of nodes left is equal to pagerankCountThreshold
-    for node, pr in sorted_pr:
-        if len(G.nodes()) - len(nodes_to_remove) <= pagerankCountThreshold:
-            break
-        # if all edge bc are lower than average, remove the node
-        flag = True
-        for edge in G_dir.edges(node):
-            if bc[edge] > bc_avg:
-                flag = False
-                break
-        if flag:
-            nodes_to_remove.add(node)
+    # compute quantile
+    pr_quantile = pd.Series(pr).quantile(pagerankQuantile)
+
+    # # remove nodes according to pagerank and betweenness centrality
+    # print("Removing nodes by pagerank and betweenness centrality...")
+    # pr = nx.pagerank(G)
+    # sorted_pr = sorted(pr.items(), key=lambda x: x[1])
+    # # print("len(sorted_pr): ", len(sorted_pr))
+    # G_dir = G.to_directed()
+    # bc = nx.edge_betweenness_centrality(G_dir)
+    # # print first element of bc
+    # # print("First element of bc: ", list(bc.items())[0])
+    # # compute average betweenness centrality
+    # bc_avg = sum(bc.values()) / len(bc)
+    # nodes_to_remove = set()
+    # # remove nodes with low pagerank, if the node have a link with bc higher than average, keep it
+    # # remove until the number of nodes left is equal to pagerankCountThreshold
+    # for node, pr in sorted_pr:
+    #     if len(G.nodes()) - len(nodes_to_remove) <= pagerankCountThreshold:
+    #         break
+    #     # if all edge bc are lower than average, remove the node
+    #     flag = True
+    #     for edge in G_dir.edges(node):
+    #         if bc[edge] > bc_avg:
+    #             flag = False
+    #             break
+    #     if flag:
+    #         nodes_to_remove.add(node)
         
-    # remove nodes
-    G.remove_nodes_from(list(nodes_to_remove))
-    print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+    # # remove nodes
+    # G.remove_nodes_from(list(nodes_to_remove))
+    # print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
     
     # # keep nodes with is_core = True
     # print("Keeping nodes with is_core = True...")
@@ -211,15 +207,15 @@ def filter_subgraph(
     # print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
     
     
-    # remove isolated nodes
-    print("Removing isolated nodes...")
-    G.remove_nodes_from(list(nx.isolates(G)))
-    print("Nodes left: ", len(G.nodes()))
-    
-    # # Keep the max connected component
-    # print("Keeping the max connected component...")
-    # G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
+    # # remove isolated nodes
+    # print("Removing isolated nodes...")
+    # G.remove_nodes_from(list(nx.isolates(G)))
     # print("Nodes left: ", len(G.nodes()))
+    
+    # Keep the max connected component
+    print("Keeping the max connected component...")
+    G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
+    print("Nodes left: ", len(G.nodes()))
     
     
     # compute betweenness centrality and pagerank again, add as attributes
