@@ -4,7 +4,7 @@ subgraphDir = "../../data/subgraph/";
 dataName = (num) => `group_${num}.json`;
 
 async function loadData() {
-    const data = await d3.json(subgraphDir + dataName(3));
+    const data = await d3.json(subgraphDir + dataName(1));
     return data
 }
 

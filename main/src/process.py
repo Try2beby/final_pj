@@ -74,41 +74,41 @@ def get_graph():
     return G
 
 
-def get_subgraph(G: nx.DiGraph, start_nodes: list):
-    result = set()
-    for node in start_nodes:
-        jump_limit = rules["jump_limit_specified_by_industry"][
-            rules["node_priority"][G.nodes[node]["type"]]
-        ]
-        edges = G.edges(node, data=True)
-        for edge in edges:
-            weight = edge[2]["weight"]
-            limit = jump_limit[weight]
-            if limit == 0:
-                continue
-            else:
-                edges_dfs = nx.dfs_edges(G, source=edge[1], depth_limit=limit)
-                result.update(edges_dfs)
+# def get_subgraph(G: nx.DiGraph, start_nodes: list):
+#     result = set()
+#     for node in start_nodes:
+#         jump_limit = rules["jump_limit_specified_by_industry"][
+#             rules["node_priority"][G.nodes[node]["type"]]
+#         ]
+#         edges = G.edges(node, data=True)
+#         for edge in edges:
+#             weight = edge[2]["weight"]
+#             limit = jump_limit[weight]
+#             if limit == 0:
+#                 continue
+#             else:
+#                 edges_dfs = nx.dfs_edges(G, source=edge[1], depth_limit=limit)
+#                 result.update(edges_dfs)
 
-    return G.edge_subgraph(result).copy()
+#     return G.edge_subgraph(result).copy()
 
 
-# def get_subgraph(G:nx.DiGraph, start_nodes, limit=3):
-#     visited = set()
-#     stack = [(node, 0) for node in start_nodes]
+def get_subgraph(G: nx.Graph, start_nodes, limit=3):
+    visited = set()
+    stack = [(node, 0) for node in start_nodes]
 
-#     while stack:
-#         node, depth = stack.pop()
-#         if node not in visited and depth <= limit:
-#             visited.add(node)
-#             for neighbor, edge_data in G[node].items():
-#                 weight = edge_data["weight"]
-#                 if weight == 1:
-#                     stack.append((neighbor, depth + 2))
-#                 else:
-#                     stack.append((neighbor, depth + 1))
+    while stack:
+        node, depth = stack.pop()
+        if node not in visited and depth <= limit:
+            visited.add(node)
+            for neighbor, edge_data in G[node].items():
+                weight = edge_data["weight"]
+                if weight == 1:
+                    stack.append((neighbor, depth + 2))
+                else:
+                    stack.append((neighbor, depth + 1))
 
-#     return G.subgraph(visited).copy()
+    return G.subgraph(visited).copy()
 
 
 def set_core(G, link_priority=rules["link_priority"]):
@@ -142,7 +142,7 @@ def filter_subgraph(
     countThreshold=100,
     countKeepPercent=0.6,
     pagerankQuantile=0.9,
-    degreeQuantile=0.3,
+    degreeQuantile=0.9,
     emptyIndustryPercentThreshold=0.5,
 ):
     def validate_node_industry(node):
@@ -193,33 +193,32 @@ def filter_subgraph(
 
     remove_nodes(nodes_to_remove)
 
-    # # remove nodes with empty industry and low degree
-    # print("Removing nodes with empty industry and low degree...")
-    # degree_quantile = np.quantile(list(dict(G.degree()).values()), degreeQuantile)
-    # nodes_to_remove = set()
-    # for node in G.nodes():
-    #     if not validate_node_industry(node) and G.degree(node) < 6:
-    #         # if any neighbor have degree > degree_quantile, keep this node
-    #         keep = False
-    #         for neighbor, edge_data in G[node].items():
-    #             if G.degree(neighbor) > degree_quantile:
-    #                 keep = True
-    #                 break
-    #         if not keep:
-    #             nodes_to_remove.add(node)
+    # remove nodes with empty industry and low degree
+    print("Removing nodes with empty industry and low degree...")
+    degree_quantile = np.quantile(list(dict(G.degree()).values()), degreeQuantile)
+    nodes_to_remove = set()
+    for node in G.nodes():
+        if not validate_node_industry(node) and G.degree(node) < 6:
+            # if any neighbor have degree > degree_quantile, keep this node
+            keep = False
+            for neighbor, edge_data in G[node].items():
+                if G.degree(neighbor) > degree_quantile:
+                    keep = True
+                    break
+            if not keep:
+                nodes_to_remove.add(node)
 
-    # remove_nodes(nodes_to_remove)
+    remove_nodes(nodes_to_remove)
 
-    # remove nodes according to pagerank quantile and betweenness centrality
-    print("Removing nodes by pagerank quantile and betweenness centrality...")
+    # remove nodes according to pagerank quantile and degree centrality
+    print("Removing nodes by pagerank quantile and degree centrality...")
     pr = nx.pagerank(G)
     # compute quantile
     pr_quantile = np.quantile(list(pr.values()), pagerankQuantile)
     # sorted_pr = sorted(pr.items(), key=lambda x: x[1])
-    G_dir = G.to_directed()
-    bc = nx.edge_betweenness_centrality(G_dir)
-    # compute average betweenness centrality
-    bc_avg = sum(bc.values()) / len(bc)
+    dc = nx.degree_centrality(G)
+    # compute average degree centrality
+    dc_avg = sum(dc.values()) / len(dc)
     nodes_to_remove = set()
     nodes_to_keep = set()
     for node in G.nodes():
@@ -239,14 +238,8 @@ def filter_subgraph(
             nodes_to_keep.update(valid_neighbors_set)
             continue
 
-        if pr[node] < pr_quantile:
-            keep = False
-            for edge in G_dir.edges(node):
-                if bc[edge] > bc_avg:
-                    keep = True
-                    break
-            if not keep:
-                nodes_to_remove.add(node)
+        if pr[node] < pr_quantile and dc[node] < dc_avg:
+            nodes_to_remove.add(node)
 
     remove_nodes(nodes_to_remove)
 

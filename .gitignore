@@ -5,6 +5,7 @@ refs/
 Node.csv
 Link.csv
 test*
+temp*
 
 __pycache__/
 
