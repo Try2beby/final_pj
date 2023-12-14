@@ -138,33 +138,32 @@ def set_core(G, link_priority=rules["link_priority"]):
 
 
 def filter_subgraph(
-    G_org,
+    G_org: nx.DiGraph,
     countThreshold=100,
     countKeepPercent=0.6,
     pagerankQuantile=0.9,
+    degreeQuantile=0.3,
     emptyIndustryPercentThreshold=0.5,
 ):
-    random.seed(42)
+    def validate_node_industry(node):
+        if G.nodes[node]["type"] == "Domain":
+            try:
+                industry = G.nodes[node]["industry"]
+                if industry == "[]":
+                    return False
+            except:
+                return False
+        return True
+
+    def remove_nodes(nodes_to_remove):
+        # remove nodes
+        G.remove_nodes_from(list(nodes_to_remove))
+        print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+
     G = G_org.copy()
+    random.seed(42)
 
     print("Filtering nodes...")
-
-    # # remove nodes with empty industry
-    # print("Removing nodes with empty industry...")
-    # nodes_to_remove = set()
-    # for node in G.nodes():
-    #     if G.nodes[node]["type"] == "Domain":
-    #         try:
-    #             industry = G.nodes[node]["industry"]
-    #             if industry == "[]":
-    #                 # print("Domain node with empty industry: ", node)
-    #                 nodes_to_remove.add(node)
-    #         except:
-    #             # print("Domain node without industry: ", node)
-    #             nodes_to_remove.add(node)
-    # # remove nodes
-    # G.remove_nodes_from(list(nodes_to_remove))
-    # print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
 
     print("Removing nodes by count...")
     nodes_to_remove = set()
@@ -192,9 +191,24 @@ def filter_subgraph(
                     if n not in keep_nodes:
                         nodes_to_remove.add(n)
 
-    # remove nodes
-    G.remove_nodes_from(list(nodes_to_remove))
-    print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+    remove_nodes(nodes_to_remove)
+
+    # # remove nodes with empty industry and low degree
+    # print("Removing nodes with empty industry and low degree...")
+    # degree_quantile = np.quantile(list(dict(G.degree()).values()), degreeQuantile)
+    # nodes_to_remove = set()
+    # for node in G.nodes():
+    #     if not validate_node_industry(node) and G.degree(node) < 6:
+    #         # if any neighbor have degree > degree_quantile, keep this node
+    #         keep = False
+    #         for neighbor, edge_data in G[node].items():
+    #             if G.degree(neighbor) > degree_quantile:
+    #                 keep = True
+    #                 break
+    #         if not keep:
+    #             nodes_to_remove.add(node)
+
+    # remove_nodes(nodes_to_remove)
 
     # remove nodes according to pagerank quantile and betweenness centrality
     print("Removing nodes by pagerank quantile and betweenness centrality...")
@@ -208,17 +222,6 @@ def filter_subgraph(
     bc_avg = sum(bc.values()) / len(bc)
     nodes_to_remove = set()
     nodes_to_keep = set()
-
-    def validate_node_industry(node):
-        if G.nodes[node]["type"] == "Domain":
-            try:
-                industry = G.nodes[node]["industry"]
-                if industry == "[]":
-                    return False
-            except:
-                return False
-        return True
-
     for node in G.nodes():
         # count valid neighbors
         valid_neighbors = 0
@@ -229,22 +232,27 @@ def filter_subgraph(
                 valid_neighbors += 1
 
         if (
-            node["type"] in ["IP", "Cert"]
-            and valid_neighbors / len(G[node]) > emptyIndustryPercentThreshold
+            G.nodes[node]["type"] in ["IP", "Cert"]
+            and valid_neighbors / (len(G[node]) + 0.01) > emptyIndustryPercentThreshold
         ):
             # update nodes_to_keep
             nodes_to_keep.update(valid_neighbors_set)
             continue
 
-        if pr[node] < pr_quantile and bc[node] < bc_avg:
-            nodes_to_remove.add(node)
+        if pr[node] < pr_quantile:
+            keep = False
+            for edge in G_dir.edges(node):
+                if bc[edge] > bc_avg:
+                    keep = True
+                    break
+            if not keep:
+                nodes_to_remove.add(node)
 
-    # remove nodes
-    G.remove_nodes_from(list(nodes_to_remove))
-    print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+    remove_nodes(nodes_to_remove)
 
     # Keep the max connected component
     print("Keeping the max connected component...")
+    G = G.to_undirected()
     G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
     print("Nodes left: ", len(G.nodes()))
 
