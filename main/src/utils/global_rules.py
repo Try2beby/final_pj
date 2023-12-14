@@ -1,43 +1,74 @@
 node_priority = {
-    "Domain": 1,  # 非常重要
-    "IP": 1,
-    "Cert": 1,
-    "Whois_Name": 2,  # 重要
+    "Domain": 3,
+    "IP": 4,
+    "Cert": 4,
+    "Whois_Name": 2,
     "Whois_Phone": 2,
     "Whois_Email": 2,
-    # 'IP_CIDR': 3,           # 一般
-    "IP_C": 3,
-    "ASN": 3,
+    "IP_C": 1,
+    "ASN": 1,
 }
 
 link_priority = {
-    "r_cert": 1,  # 很强
-    "r_subdomain": 1,
-    "r_request_jump": 1,
-    "r_dns_a": 1,
-    "r_whois_name": 2,  # 较强
-    "r_whois_email": 2,
-    "r_whois_phone": 2,
-    "r_cert_chain": 3,  # 一般
-    "r_cname": 3,
-    "r_asn": 4,  # 较弱
-    "r_cidr": 4,
+    "r_cert": 4,
+    "r_subdomain": 4,
+    "r_request_jump": 4,
+    "r_dns_a": 4,
+    "r_whois_name": 3,
+    "r_whois_email": 3,
+    "r_whois_phone": 3,
+    "r_cert_chain": 2,
+    "r_cname": 2,
+    "r_asn": 1,
+    "r_cidr": 1,
 }
 
-jump_limit = {4: 1, 3: 2, 2: 3, 1: 4}
+jump_limit = {
+    1: 0,
+    2: 1,
+    3: 2,
+    4: 3,
+}
+
+jump_limit_specified_by_industry = {
+    4: {
+        1: 0,
+        2: 1,
+        3: 2,
+        4: 3,
+    },
+    3: {
+        1: 0,
+        2: 0,
+        3: 1,
+        4: 2,
+    },
+    2: {
+        1: 0,
+        2: 0,
+        3: 1,
+        4: 1,
+    },
+    1: {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 1,
+    },
+}
 
 net_limit = {
-    "small": {"node": 400, "edge": 800, "corelimit": 6, "filterbase": 20},
-    "medium": {"node": 800, "edge": 1600, "corelimit": 10, "filterbase": 30},
-    "large": {"node": 3000, "edge": 6000, "corelimit": 20, "filterbase": 70},
+    "small": {"node": 400, "edge": 800},
+    "medium": {"node": 800, "edge": 1600},
+    "large": {"node": 3000, "edge": 6000},
 }
 
 scale = {
-    "1":"small",
-    "2":"medium",
-    "3":"medium",
-    "4":"large",
-    "5":"large",
+    "1": "small",
+    "2": "medium",
+    "3": "medium",
+    "4": "large",
+    "5": "large",
 }
 
 evidence = {
@@ -72,6 +103,7 @@ rules = {
     "node_priority": node_priority,
     "link_priority": link_priority,
     "jump_limit": jump_limit,
+    "jump_limit_specified_by_industry": jump_limit_specified_by_industry,
     "net_limit": net_limit,
     "evidence": evidence,
     "scale": scale,
