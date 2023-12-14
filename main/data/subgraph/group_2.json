@@ -13,15 +13,6 @@
             "id": "IP_36b2ba5b0800d154ef3add5672b7561af9535edd92d2c3323c64880498b45a05"
         },
         {
-            "name": "9be5aee5cc.com",
-            "type": "Domain",
-            "is_core": false,
-            "industry": "[]",
-            "betweenness": 1.0,
-            "pagerank": 0.48648582432442095,
-            "id": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772"
-        },
-        {
             "name": "45.114.xxx.xxx",
             "type": "IP",
             "is_core": true,
@@ -29,6 +20,15 @@
             "betweenness": 0.0,
             "pagerank": 0.25675708783778944,
             "id": "IP_f9b588fa3410ab89fa0e50b011c9ac8ddfa4a3125ea3df13fa4598faa5e15f8a"
+        },
+        {
+            "name": "9be5aee5cc.com",
+            "type": "Domain",
+            "is_core": false,
+            "industry": "[]",
+            "betweenness": 1.0,
+            "pagerank": 0.48648582432442095,
+            "id": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772"
         }
     ],
     "links": [
@@ -41,8 +41,8 @@
         {
             "weight": 4,
             "relation": "r_dns_a",
-            "source": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772",
-            "target": "IP_f9b588fa3410ab89fa0e50b011c9ac8ddfa4a3125ea3df13fa4598faa5e15f8a"
+            "source": "IP_f9b588fa3410ab89fa0e50b011c9ac8ddfa4a3125ea3df13fa4598faa5e15f8a",
+            "target": "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772"
         }
     ]
 }
