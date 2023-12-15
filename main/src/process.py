@@ -37,7 +37,6 @@ def get_graph():
     print("Link shape: ", Link.shape)
 
     # add weights to links according to relation and rules
-    # link_weight = (5-rules[link_priority][Link["relation"]])/5
     Link["weight"] = Link["relation"].apply(lambda x: rules["link_priority"][x])
 
     G = nx.Graph()
@@ -50,6 +49,9 @@ def get_graph():
                 "type": x["type"],
                 "is_core": None,
                 "industry": x["industry"] if x["type"] == "Domain" else None,
+                "priority": 4
+                if x["type"] == "Domain" and x["industry"] != "[]"
+                else rules["node_priority"][x["type"]],
             },
         ),
         axis=1,
@@ -74,41 +76,42 @@ def get_graph():
     return G
 
 
-# def get_subgraph(G: nx.DiGraph, start_nodes: list):
-#     result = set()
-#     for node in start_nodes:
-#         jump_limit = rules["jump_limit_specified_by_industry"][
-#             rules["node_priority"][G.nodes[node]["type"]]
-#         ]
-#         edges = G.edges(node, data=True)
-#         for edge in edges:
-#             weight = edge[2]["weight"]
-#             limit = jump_limit[weight]
-#             if limit == 0:
-#                 continue
-#             else:
-#                 edges_dfs = nx.dfs_edges(G, source=edge[1], depth_limit=limit)
-#                 result.update(edges_dfs)
+def get_subgraph(G: nx.Graph, start_nodes: list, Jump_limit: dict):
+    result = set()
+    for node in start_nodes:
+        jump_limit = Jump_limit[G.nodes[node]["priority"]]
+        edges = G.edges(node, data=True)
+        for edge in edges:
+            weight = edge[2]["weight"]
+            limit = jump_limit[weight]
+            if limit == 0:
+                continue
+            else:
+                edges_dfs = nx.dfs_edges(G, source=edge[1], depth_limit=limit)
+                result.update(edges_dfs)
+    subgraph = G.edge_subgraph(result).copy()
+    print("#nodes in subgraph: ", subgraph.number_of_nodes())
+    print("#edges in subgraph: ", subgraph.number_of_edges())
 
-#     return G.edge_subgraph(result).copy()
+    return subgraph
 
 
-def get_subgraph(G: nx.Graph, start_nodes, limit=3):
-    visited = set()
-    stack = [(node, 0) for node in start_nodes]
+# def get_subgraph(G: nx.Graph, start_nodes, limit=3):
+#     visited = set()
+#     stack = [(node, 0) for node in start_nodes]
 
-    while stack:
-        node, depth = stack.pop()
-        if node not in visited and depth <= limit:
-            visited.add(node)
-            for neighbor, edge_data in G[node].items():
-                weight = edge_data["weight"]
-                if weight == 1:
-                    stack.append((neighbor, depth + 2))
-                else:
-                    stack.append((neighbor, depth + 1))
+#     while stack:
+#         node, depth = stack.pop()
+#         if node not in visited and depth <= limit:
+#             visited.add(node)
+#             for neighbor, edge_data in G[node].items():
+#                 weight = edge_data["weight"]
+#                 if weight == 1:
+#                     stack.append((neighbor, depth + 2))
+#                 else:
+#                     stack.append((neighbor, depth + 1))
 
-    return G.subgraph(visited).copy()
+#     return G.subgraph(visited).copy()
 
 
 def set_core(G, link_priority=rules["link_priority"]):
@@ -138,12 +141,15 @@ def set_core(G, link_priority=rules["link_priority"]):
 
 
 def filter_subgraph(
-    G_org: nx.DiGraph,
+    G_org: nx.Graph,
     countThreshold=100,
     countKeepPercent=0.6,
     pagerankQuantile=0.9,
     degreeQuantile=0.9,
+    degreeCentralityQuantile=0.9,
     emptyIndustryPercentThreshold=0.5,
+    scaleThreshold=400,
+    verbose=False,
 ):
     def validate_node_industry(node):
         if G.nodes[node]["type"] == "Domain":
@@ -151,21 +157,30 @@ def filter_subgraph(
                 industry = G.nodes[node]["industry"]
                 if industry == "[]":
                     return False
+                else:
+                    return True
             except:
                 return False
-        return True
+        return False
 
     def remove_nodes(nodes_to_remove):
         # remove nodes
         G.remove_nodes_from(list(nodes_to_remove))
-        print("Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes()))
+        if verbose:
+            print(
+                "Nodes removed: ", len(nodes_to_remove), "Nodes left: ", len(G.nodes())
+            )
+
+    def myprint(*args):
+        if verbose:
+            print(*args)
 
     G = G_org.copy()
     random.seed(42)
 
-    print("Filtering nodes...")
+    myprint("Filtering subgraph...")
 
-    print("Removing nodes by count...")
+    myprint("Removing nodes by count...")
     nodes_to_remove = set()
     for node in G.nodes():
         neighbors = G[node]
@@ -193,66 +208,115 @@ def filter_subgraph(
 
     remove_nodes(nodes_to_remove)
 
-    # remove nodes with empty industry and low degree
-    print("Removing nodes with empty industry and low degree...")
-    degree_quantile = np.quantile(list(dict(G.degree()).values()), degreeQuantile)
-    nodes_to_remove = set()
-    for node in G.nodes():
-        if not validate_node_industry(node) and G.degree(node) < 6:
-            # if any neighbor have degree > degree_quantile, keep this node
-            keep = False
-            for neighbor, edge_data in G[node].items():
-                if G.degree(neighbor) > degree_quantile:
-                    keep = True
-                    break
-            if not keep:
-                nodes_to_remove.add(node)
-
-    remove_nodes(nodes_to_remove)
-
     # remove nodes according to pagerank quantile and degree centrality
-    print("Removing nodes by pagerank quantile and degree centrality...")
+    myprint("Removing nodes by pagerank quantile and degree centrality...")
     pr = nx.pagerank(G)
     # compute quantile
     pr_quantile = np.quantile(list(pr.values()), pagerankQuantile)
     # sorted_pr = sorted(pr.items(), key=lambda x: x[1])
     dc = nx.degree_centrality(G)
-    # compute average degree centrality
-    dc_avg = sum(dc.values()) / len(dc)
+    dc_quantile = np.quantile(list(dc.values()), degreeCentralityQuantile)
     nodes_to_remove = set()
     nodes_to_keep = set()
     for node in G.nodes():
+        if node in nodes_to_keep:
+            continue
         # count valid neighbors
         valid_neighbors = 0
         valid_neighbors_set = set()
-        for neighbor, edge_data in G[node].items():
+        node_neighbors = G.neighbors(node)
+        for neighbor in node_neighbors:
             if validate_node_industry(neighbor):
-                valid_neighbors_set.add(neighbor)
                 valid_neighbors += 1
+                valid_neighbors_set.add(neighbor)
 
         if (
             G.nodes[node]["type"] in ["IP", "Cert"]
-            and valid_neighbors / (len(G[node]) + 0.01) > emptyIndustryPercentThreshold
+            and valid_neighbors / (len(list(node_neighbors)) + 0.01)
+            > emptyIndustryPercentThreshold
         ):
             # update nodes_to_keep
             nodes_to_keep.update(valid_neighbors_set)
             continue
 
-        if pr[node] < pr_quantile and dc[node] < dc_avg:
+        if pr[node] < pr_quantile and dc[node] < dc_quantile:
             nodes_to_remove.add(node)
 
     remove_nodes(nodes_to_remove)
 
+    # # remove nodes till the graph is small enough
+    # print("Removing nodes till the graph is small enough...")
+    # pr = nx.pagerank(G)
+    # pr_sorted = sorted(pr.items(), key=lambda x: x[1])
+    # dc = nx.degree_centrality(G)
+    # dc_quantile = np.quantile(list(dc.values()), degreeCentralityQuantile)
+    # G_len = len(G.nodes())
+    # nodes_to_remove = set()
+    # for node, _ in pr_sorted:
+    #     if dc[node] < dc_quantile:
+    #         remove = True
+    #         count = 0
+    #         for neighbor in G.neighbors(node):
+    #             if dc[neighbor] >= dc_quantile:
+    #                 count += 1
+    #                 break
+    #         if count >= 2:
+    #             remove = False
+    #         if remove:
+    #             nodes_to_remove.add(node)
+    #             break
+
+    #     if G_len - len(nodes_to_remove) <= scaleThreshold:
+    #         break
+
+    # remove_nodes(nodes_to_remove)
+
     # Keep the max connected component
-    print("Keeping the max connected component...")
-    G = G.to_undirected()
+    myprint("Keeping the max connected component...")
+    G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
+
+    # remove nodes with empty industry and low degree
+    myprint("Removing nodes with empty industry and low degree...")
+    degree_quantile = np.quantile(list(dict(G.degree()).values()), degreeQuantile)
+    myprint("Degree quantile: ", degree_quantile)
+    nodes_to_remove = set()
+    for node in G.nodes():
+        if not validate_node_industry(node) and G.degree(node) <= degree_quantile:
+            # if any neighbor have degree > degree_quantile, keep this node
+            keep = False
+            count = 0
+            for neighbor in G.neighbors(node):
+                if G.degree(neighbor) > degree_quantile:
+                    count += 1
+            if count >= 2:
+                keep = True
+            if not keep:
+                nodes_to_remove.add(node)
+
+    remove_nodes(nodes_to_remove)
+
+    # Keep the max connected component
+    myprint("Keeping the max connected component...")
     G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
     print("Nodes left: ", len(G.nodes()))
+    print("Edges left: ", len(G.edges()))
+
+    # count nodes with non-empty industry
+    count = 0
+    count_domain = 0
+    for node in G.nodes():
+        if G.nodes[node]["type"] == "Domain":
+            count_domain += 1
+            if G.nodes[node]["industry"] != "[]":
+                count += 1
+    print("Nodes with non-empty industry: %d / %d" % (count, count_domain))
 
     # compute betweenness centrality and pagerank again, add as attributes
     bc = nx.betweenness_centrality(G)
+    dc = nx.degree_centrality(G)
     pr = nx.pagerank(G)
     nx.set_node_attributes(G, bc, "betweenness")
+    nx.set_node_attributes(G, dc, "degree_centrality")
     nx.set_node_attributes(G, pr, "pagerank")
 
     return G
