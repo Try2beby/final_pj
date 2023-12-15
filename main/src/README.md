@@ -44,8 +44,22 @@
   
     初步判断了是否为核心资产（筛选出来的节点大都是核心资产，`is_core = True`）
   
+
+## 子图挖掘结果
+
+| g1   | g2   |
+| ---- | ---- |
+| g3   | g5   |
+
+| <img width=500px src="./assets/g1.png"> | <img width=500px src="./assets/g1.png"> |
+| :-------------------------------------: | :-------------------------------------: |
+| <img width=500px src="./assets/g3.png"> | <img width=500px src="./assets/g5.png"> |
+
+g4(3D图)
+
+<img width=500px src="./assets/g4.png">
+
 # TO DO
 
-- 完善筛选子图的方案
-- 识别关键链路
+- 识别 核心资产、关键链路
 

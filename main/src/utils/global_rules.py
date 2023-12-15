@@ -30,7 +30,8 @@ jump_limit = {
     4: 3,
 }
 
-jump_limit_specified_by_industry = {
+
+jump_limit_specified_by_industry_2 = {
     4: {
         1: 0,
         2: 1,
@@ -39,7 +40,34 @@ jump_limit_specified_by_industry = {
     },
     3: {
         1: 0,
+        2: 1,
+        3: 2,
+        4: 3,
+    },
+    2: {
+        1: 0,
+        2: 1,
+        3: 2,
+        4: 2,
+    },
+    1: {
+        1: 0,
         2: 0,
+        3: 2,
+        4: 2,
+    },
+}
+
+jump_limit_specified_by_industry_1 = {
+    4: {
+        1: 0,
+        2: 1,
+        3: 2,
+        4: 2,
+    },
+    3: {
+        1: 0,
+        2: 1,
         3: 1,
         4: 2,
     },
@@ -47,14 +75,22 @@ jump_limit_specified_by_industry = {
         1: 0,
         2: 0,
         3: 1,
-        4: 1,
+        4: 2,
     },
     1: {
         1: 0,
         2: 0,
-        3: 0,
-        4: 1,
+        3: 1,
+        4: 2,
     },
+}
+
+jump_limit_specified_by_industry = {
+    "2": jump_limit_specified_by_industry_2,
+    "1": jump_limit_specified_by_industry_1,
+    "3": jump_limit_specified_by_industry_1,
+    "4": jump_limit_specified_by_industry_1,
+    "5": jump_limit_specified_by_industry_1,
 }
 
 net_limit = {
