@@ -51,7 +51,7 @@
 | ---- | ---- |
 | g3   | g5   |
 
-| <img width=500px src="./assets/g1.png"> | <img width=500px src="./assets/g1.png"> |
+| <img width=500px src="./assets/g1.png"> | <img width=500px src="./assets/g2.png"> |
 | :-------------------------------------: | :-------------------------------------: |
 | <img width=500px src="./assets/g3.png"> | <img width=500px src="./assets/g5.png"> |
 
