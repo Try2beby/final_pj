@@ -9,6 +9,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_7ab379123d184677806451bdfb5ad2f928ea9a5b47d37ff7e7a17a9eb5c5718d"
@@ -19,6 +20,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.15155511000076025,
             "degree_centrality": 0.03535353535353536,
             "pagerank": 0.007059924134034053,
             "id": "Domain_91de97019b99f9e4b03f9d1bec9fd8925b15a3687a10ea0124baab42e36170b7"
@@ -29,6 +31,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_b9d1b3ce2720d6a35f932fd4b17547f0492fa9d361274320c54a8d626a254780"
@@ -39,6 +42,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_7ec28bec87e9af2e9ad31af2eaecbf98baaf96ee117effed4f873047473fe016"
@@ -49,6 +53,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_142f38ea173fe65a1138c9d3168e69dfb38341dd5b96c85cd93d2fc678474b2a"
@@ -59,6 +64,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_5b6302f47de7f9a8cc15bbb9e3bcd6cd60cbc0ad645e482be4a4f77953949ad8"
@@ -69,6 +75,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_7bc99ff1ae9c3cffbe9d0d35bd99218ea821ecbe8f73d30b3c449ff89c824c36"
@@ -79,6 +86,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_b27e395e70fc443aec762214a681680a8720479c6086d530601b41b2e1349a95"
@@ -89,6 +97,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_d636fcb7682f93eb26651a6b536543566fda0a0416166cea57de46a499003eee"
@@ -99,6 +108,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_285327e3bc17ee0ecbfe0128e57c1f89b1707b997f11fe4b6ea89130817d2dab"
@@ -109,6 +119,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_8e454235bfed74978c3a8fa93b002d8cf0a946c175c0df4ead810477e8014780"
@@ -119,6 +130,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_d9fb32f3abf707f28d8dce9e4a504a60e3c58392c505010d44e594d189b40957"
@@ -129,6 +141,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_70f30b44988bd891609e6393045b4598582f2fa248890fdf0a7f69cf4a2f0b75"
@@ -139,6 +152,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_f4f958367e464d492e2766ace5ee5122dda620a0512aa97be5de4ad648308f2d"
@@ -149,6 +163,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_d4cca9ae126cbdfa05f94f56340d5418d4ed22afb64bffa48c16c65de3420f5d"
@@ -159,6 +174,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_d8153f03fc26391bc3d07150141b2d0fbbe731e3e6fba71a3b93f8aea53a8a0b"
@@ -169,6 +185,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_c5c4a3b9e4dc835ef49291e0dcb6311476b8bd240f5a516eca78dab81b46e351"
@@ -179,6 +196,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_5b5bb7f6b9e282fde2f919dd4bf873f157ba10ed71ed9dd3d03c0cf93499ef16"
@@ -189,6 +207,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_440a1e0653cf29d225de21b066590e16b9d912b3fcec3483a6b6a57028586e12"
@@ -199,6 +218,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_c4a8975cddc79c7aaaa16a830e7c1cd5acffce9f95899a592e896668b3088b2b"
@@ -209,6 +229,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_98e23a79e3964b78bfb8e35405d3108735ba469cd591412182a038ba7488ed26"
@@ -219,6 +240,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_04022dc8a6439004db731b3bee3915aec225da2f8061d8146a738c65fcb5d12b"
@@ -229,6 +251,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_7140691be8949f669a79e7e26853d0815b071012968938137b50ce382e2a1e20"
@@ -239,6 +262,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_7a2ed6e175abd1ef8e5bd5ea187ab63c389e8308e6a82ad5bf8046317752f14f"
@@ -249,6 +273,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_846b86e433e53c9c2976b1c1819c005c325f30708043c59c084d198fc7c03d3c"
@@ -259,6 +284,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_6f5e59faf6ee864bd3a7c45d374740bb86a00558b0bc66a2bfdfb493fec04c59"
@@ -269,6 +295,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_fdcfa8862ea7519c5cc1cadfcd9abad6c203876740fecd7ed2f15680cc0a8e29"
@@ -279,6 +306,7 @@
             "is_core": true,
             "industry": "['I']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_b09ee65b680fbf1c5b5ceb06b458938de97a5cb306e2637140a518de1e966638"
@@ -289,6 +317,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_dac70a0469f212b5df51dfccaddbdca191d75d19c8703de9d47369627bcb8c03"
@@ -299,6 +328,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_b9e35a9d38e6b0355b22c83cf52f57eb8b6df492e8f08d171e7ec67112684133"
@@ -309,6 +339,7 @@
             "is_core": true,
             "industry": "['A', 'B']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_39dee509d29142caf91607613e7ff0ae8032944c338a5f7a42be54a7cdad16ff"
@@ -319,6 +350,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_4aac87595c0888c4e34446d7f087e51bb05615e2e67d607e15a04573886c8807"
@@ -329,6 +361,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_e8751cc2bba5c2eba168970c1569b13aa827624f1191e5ad4fdd5ffa70aec77d"
@@ -339,6 +372,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_e4f503f1b6c4aadc24d7b7569074af46d57af991228b01f5ff9b24f572361873"
@@ -349,6 +383,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_ee2b0e9671b0558c4bc753df5aece320d5084e886bd8a338e5b092b788c733e4"
@@ -359,6 +394,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_8011e0d9232a28665ed98226ae9fdc48e1a7fda7a0f4cfe2cab4ca9de10cbe60"
@@ -369,6 +405,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a31a1c3fee46b2a18f260d92dd22aec091b7621fb5557a22e09c507c90a6a35e"
@@ -379,6 +416,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0025084806600213345,
             "id": "Domain_d7632006adfa48173b7791317e2c14bc5633a782816812fca33d198c5ac65844"
@@ -389,6 +427,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_98019c3a824ffa35e4f58e63a6192af522c0698131c0faf845b15ae13275a2e1"
@@ -399,6 +438,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_5234b0d86aef760bc3dfa4eba03dd85391fc2cfede660b19fbdd03c378aca23a"
@@ -409,6 +449,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_22efeff65cb09c8a806ca33eefbd1008d5557f36b8c0dffabb4569e8e88a1f0d"
@@ -419,6 +460,7 @@
             "is_core": true,
             "industry": "['A', 'B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_e3ff58fe5ee091de3cce3b319131331039d39190f730b4a3d94936e2243f8606"
@@ -429,6 +471,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.010101010101010102,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.004128632820422781,
             "id": "Domain_807a8a1a5282607c2063a5b0365268b25f0f62d61741a3e25244840595f10dc3"
@@ -439,6 +482,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_ff7fae37b5d5f91ff25d956fee108fe306026eef64d875b7faebdcf50b9cfd5f"
@@ -449,6 +493,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_5a41766995f5a19011683ad6fb27a36d0444265535ce440cfdc48924346188d6"
@@ -459,6 +504,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_6ae63cc8b3b3e8de450307da5cf9f0aec1b55a93dc9ca2d7747b3b660f664c51"
@@ -469,6 +515,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_82c1c9cf81c1933d870455a85eb30c6a5d6807bb7ff194b6020da62e4f14dfdf"
@@ -479,6 +526,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_d5dc0fa8190877f379c5b7d6f90a72f5e9274361db5721ea36cb6f312812b3b1"
@@ -489,6 +537,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.4740533581335262,
             "degree_centrality": 0.030303030303030304,
             "pagerank": 0.007488025643623561,
             "id": "Domain_61befc7014010dffed9239b8a133396e1a88fa822703b677b123268eb16be3f7"
@@ -499,6 +548,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_70d26490b18d0d530ab45d3f3d962b29e664ed7bdad8103ccd306ac99bb21c70"
@@ -509,6 +559,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_571a8a03bed71a4722b209f03807fe74c1a908efa7b4ed77417056a324c7b31b"
@@ -519,6 +570,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.004614674665436087,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0037423709378029825,
             "id": "IP_38d08556e5f342ddca3d2001e92f56b2e835b43a8ff78e202ede932442cae5b2"
@@ -529,6 +581,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_1af571b08126316100c5881d0b6e2dc7e349572d3dc30623d117b6ba1e604f69"
@@ -539,6 +592,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_b9208bf08ecaa14be27b272bbb37cdf43d89036471389952b5b908829b49df99"
@@ -549,6 +603,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.00354219009041344,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.005037395632094507,
             "id": "Domain_1d8e02f35e2cba9afb64a653aec2d7703559001c9d4f24c9b119eba50c47df10"
@@ -559,6 +614,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_ee8a600d85bfc165df5a8dc7ecfed3a371b0eb79ff22881be3daaafff0afa480"
@@ -569,6 +625,7 @@
             "is_core": true,
             "industry": null,
             "priority": 2,
+            "betweenness": 0.16433369225247385,
             "degree_centrality": 0.14646464646464646,
             "pagerank": 0.025554632828151628,
             "id": "Whois_Name_db0925a5aeb1849fa7b41f7a29c1192d38e12e97fb6e82e72e894e3c733130ef"
@@ -579,6 +636,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_1a78754aad1049a4ca7ac57e21a15740dae9efeefcf6aa4173a94127a210e31b"
@@ -589,6 +647,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_b1c947669d44356a1de8002a02adedc99c3c63328c4bf0c31cf3e54186bbeb26"
@@ -599,6 +658,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_502c91c04a679abd631f736d6f90fffc957f4b1c4364e31b418ced06a1ce0131"
@@ -609,6 +669,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_06d36b8bd1a98718e7f399a3bae97e3d46e388767c1fe7bc4f86a781bdf210b5"
@@ -619,6 +680,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_02fdb7e5ddca4aff021de3a3b41e4aeea17eb9fae032e04ee71531ed19d9a55b"
@@ -629,6 +691,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_6599a58c3a560d29710c0c8ea29e4ee8b001ae74ad4240a7256dcd7b2a01ea29"
@@ -639,6 +702,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 4.614674665436087e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0043733871276374,
             "id": "Domain_afd826ef13c05bc22f4781e7ad58b8cf5a2b66fc0b65b94cefee484aca14bcaf"
@@ -649,6 +713,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_631dd6392eb07714f0efaa984bae9dae042d77cfcbc70a7fdab2146fb509952a"
@@ -659,6 +724,7 @@
             "is_core": true,
             "industry": "['A', 'B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_42ace0d5008d0c5c53800a57a66ab68228ddcbacc7d3184a66402b5a211c5482"
@@ -669,6 +735,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_413a339b4ebdfdaee6fa1210a9645c700b0f92b44d19a6af2fc261302196f8d3"
@@ -679,6 +746,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_42e35f943cc236cc310ce1fbc67924a0b9ddd1e0b2aa6aedc7bd2bd7721cfc66"
@@ -689,6 +757,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_a2d2208c5348b93e3ddc90439ae6c7eda49cde8c4e1e35609d978e3c3209156b"
@@ -699,6 +768,7 @@
             "is_core": true,
             "industry": "['E']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_9a29122f1eefd5d8dd1b20f14ca9b796608e7567fd769c94ab2e39143347e081"
@@ -709,6 +779,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.00354219009041344,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.00436751143885281,
             "id": "Domain_e5faee798ab94195e75d453c625b9778a33b5df78d7b2c28e012c689836cfe9a"
@@ -719,6 +790,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_db7146ee8e19d2f52c5d74787c8acb58570aeb20b0d1bd4e5b6c2b9313795807"
@@ -729,6 +801,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_978c58de88382597cf37f53d95cccde927402e388ad131c60b8c671e63afd06e"
@@ -739,6 +812,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_0d3467a1d037757964eaba7cbbf10716fe252094825bdfea2c6fcc8bded1c89e"
@@ -749,6 +823,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_43a135ac21c6d410ef6c99558aac8b30678b4b73e6923d2e9fdfd1c240d464d9"
@@ -759,6 +834,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_2df0a2aba2663829086ec913896127596f25e4dd8e76300fc7a086ea2fedad97"
@@ -769,6 +845,7 @@
             "is_core": false,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.2679136806040359,
             "degree_centrality": 0.05050505050505051,
             "pagerank": 0.01242741073840863,
             "id": "Domain_f3554b666038baffa5814c319d3053ee2c2eb30d31d0ef509a1a463386b69845"
@@ -779,6 +856,7 @@
             "is_core": true,
             "industry": null,
             "priority": 2,
+            "betweenness": 0.2068912475003844,
             "degree_centrality": 0.15656565656565657,
             "pagerank": 0.027936119055221215,
             "id": "Whois_Email_5a3d16b7df3d815d5f3436bd5dd5c5e1054ee7cb74d4fd8d9efdf3af362a4a18"
@@ -789,6 +867,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_a6e42f8160daabdd33039939e4f1326c919b60fd184a115d20968af7b65b8fc2"
@@ -799,6 +878,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_9034f6f99b8b22568a9550c90e20cad7dfb581a5a0f991d26b9771cae848c919"
@@ -809,6 +889,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_e8f4058a399cba87d32f6cbb2504b73f3cf13b663d0866b53ca55516e7cbee3a"
@@ -819,6 +900,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_9a5385d9741e27aa6a939e258085eeecbffe92cdad81811424e9642f0844c453"
@@ -829,6 +911,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_6655c0b8a6e8a0be01b196cb65bfbc3b273fcf4fe07e0d523b77e5cef7b1ad89"
@@ -839,6 +922,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_07164ad2b8fe5bc0aac62bef1fc64be0b06be3de7de9d1a1b9f1e3603427f8fb"
@@ -849,6 +933,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 2.5637081474644928e-05,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.003097629807356238,
             "id": "Cert_90251c3412b1d10fed822153d9877b1dcb2eed0b35c174b2b1f8b1a58de9bc7f"
@@ -859,6 +944,7 @@
             "is_core": true,
             "industry": "['I']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_7052a020df8972b046ffa0d33f7b12ed48f7c0fae9b587c167731004ae5493ab"
@@ -869,6 +955,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_2eeda83b221d7e64e681c77315ad4f59dc1d175daa9050bb9b9aaad82036f2e7"
@@ -879,6 +966,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_da8cdd456ee4d26d1786e25bfd46db4f850df20a10984cae1a55a93b4980e21d"
@@ -889,6 +977,7 @@
             "is_core": false,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.8417807516792288,
             "degree_centrality": 0.6111111111111112,
             "pagerank": 0.27486277356034994,
             "id": "Cert_fe794a69eacd63b21245bf4eda826222fc6c5862bebf77aa05459cb308cfd063"
@@ -899,6 +988,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_dd3b36efc1967d5e25150997f34e71af13553c29330302d9ac63436742f6ce46"
@@ -909,6 +999,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_ca40babfd1d7d23f4b9227f8407608d589dbfccefb648e81659c1b9067fd3058"
@@ -919,6 +1010,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_d4fbc453254e2b585d596760005dc921bf618928861775273b86f80f66e46d8b"
@@ -929,6 +1021,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.004999230887555762,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.004968839049043331,
             "id": "Domain_511e2087ce39849f01f8bb33b9ab6fd02f7574c91339a7a8b3828dc5d5de62be"
@@ -939,6 +1032,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.001576680510690663,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.003747511569299581,
             "id": "IP_4ef639586c6a24c0a9a4ba8741d9c47f302cf66402d01708f74068301ae09daa"
@@ -949,6 +1043,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_98faf684e62d057463783d4199e5459f4ce433a9954eddddf1b6c1792418ba08"
@@ -959,6 +1054,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_7048137ed28817bfa589ad453edfa432f765823fc4655641fbcbf45a81048d1d"
@@ -969,6 +1065,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_d0dda6717a9c5bbca8a5deb1f3c23a9ddb0067a2a9fa559ac0753983008dafe8"
@@ -979,6 +1076,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_dbce24447a3715aba967bb26381be598583095b1fdfed661942cb66bff52a000"
@@ -989,6 +1087,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_3fa5707622411fdbe5b732d11ef434e8ec0854d3df3f68c0b5b65a4338e87fb3"
@@ -999,6 +1098,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a71091f5759ed561630df961cc82f00c0f8bb077e90c346c9486039b1c87e55a"
@@ -1009,6 +1109,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_629ef76d022bdf77c37ca718385c81ade25611cb918a67011326f61c99114c1a"
@@ -1019,6 +1120,7 @@
             "is_core": true,
             "industry": "['E']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_9a1954f84e6070174caa0614e0b79bfac42c4416ae8f200836749ae05a3c492c"
@@ -1029,6 +1131,7 @@
             "is_core": true,
             "industry": "['E']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_a23199abe7be107b209ee6e84edb0489d6f8f1d6c7f4b79e5c082df5e362dc6e"
@@ -1039,6 +1142,7 @@
             "is_core": true,
             "industry": "['A', 'G', 'B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_3f55104f1934228115c301828a0d6d93ab4ec996552d1d616ed9af5fff628070"
@@ -1049,6 +1153,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_eba9ba9bc69dac34e4149dd8aa3e91e77db1790ab53df0a11d875eeec18cd6c5"
@@ -1059,6 +1164,7 @@
             "is_core": true,
             "industry": null,
             "priority": 1,
+            "betweenness": 2.5637081474644928e-05,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.001499530328523149,
             "id": "ASN_3acb98d8043248d884b0236acff6e75a199b89dff521dcc142d59df236c7992e"
@@ -1069,6 +1175,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_fefef2c0a5a4d2ba08dcbc8be24321b2348a5fada9d151ead14846e58deb025f"
@@ -1079,6 +1186,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_4dafb6a26b7e537d0e7e9b149253ba4c46debfc572ba91b8c22f58b7fdc6c044"
@@ -1089,6 +1197,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_005c5874cc8a3fbe2f9ffb8a2f537bd0c46cb83b02b0dca02da69c71d4ca94e1"
@@ -1099,6 +1208,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_c3c414ce88cfcb4b369d98733d45b606c1ccf8c1b1604c342cf5205960771dbf"
@@ -1109,6 +1219,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_15b83a1cf0e592c32aeb31794b21a0246841bd4def23324e5ad45a7c3d50a2bd"
@@ -1119,6 +1230,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_c7608661b02e31e4abf19d468bca4016fc62b35fcd9aac00c4bf99e76e7aa85c"
@@ -1129,6 +1241,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_05c129477eeeb4a8c11e308371ec9fcaa582dbce1e4874d0609840cfe003bce5"
@@ -1139,6 +1252,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_145bf7f7ed089d40c7b5c972946137c6e986fc402327c5b946f541f6b9a1669e"
@@ -1149,6 +1263,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_af51eaa02d119dbf3a558d276e90963b7f45a24d6147a6c72099adc344e508b0"
@@ -1159,6 +1274,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_23fc98a77d1d62a0e2c0dbbdddf3031d17b1cfde5634089ddfba6b69854ca6c2"
@@ -1169,6 +1285,7 @@
             "is_core": false,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.011858004751405742,
             "degree_centrality": 0.025252525252525256,
             "pagerank": 0.005960063643181784,
             "id": "IP_e9d4d0c9b504b782a7e04f78cf471fc52abba41c1330dec1bd5cfb583add10ce"
@@ -1179,6 +1296,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_310046b0b034e6b733b0a8a32bceea252c23abe817853bfac69e73b6e6490835"
@@ -1189,6 +1307,7 @@
             "is_core": true,
             "industry": "['E']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_38f09ea90010124484f42ef3b9739b698bde4de26b505c523a03d08de19b9a67"
@@ -1199,6 +1318,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_9cfe59a913504681bfa92d220df1b59970a8bd5ed7fc035a282aab47f637dc00"
@@ -1209,6 +1329,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a2c7c7db8249c675730818c5e85b0f50c3f3b654d0155cb19327eb530676b7d6"
@@ -1219,6 +1340,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_5bfd270749a2e0aa886a4b6959f2f6be59d13d5b122091949a6398d3f86c9b2f"
@@ -1229,6 +1351,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_73542e42b99f42237e0adf4678d4aeaf08695c83bb623b368b624a428d03ea5f"
@@ -1239,6 +1362,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_e974c180c032fba589893f85bf3e632a8161eb787c95d3781d42a5969eb18152"
@@ -1249,6 +1373,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.15155511000076025,
             "degree_centrality": 0.03535353535353536,
             "pagerank": 0.007059924134034053,
             "id": "Domain_cee489b4e75d3b79f86fc13516688cb4ed6a84e39f139f25014bf97c0d7bfbf1"
@@ -1259,6 +1384,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_fddb12dad2babd3553efa1210ab41806dfd9c53b55fd77301f9ea74dfa3236a8"
@@ -1269,6 +1395,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_cacbccb944c503157494a9ddc7ba01a2584cf2e51422220144b9e63226f6c3d6"
@@ -1279,6 +1406,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_3e51451557a955631ae2136f6290de669138c94daff1f150465531ee24faa00d"
@@ -1289,6 +1417,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_63decc9ff485eadc09738bf67438053c202e1a0bceed90acdf766068b33a906d"
@@ -1299,6 +1428,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a3541e200ca966c56d681f53dcc8040aaa007e04c2e8acff70a309ff99e4ba3c"
@@ -1309,6 +1439,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_3c3e7ac3dd353eccf0142dbc13fa1a2ed30d74fea083b74d9b9a417824b84606"
@@ -1319,6 +1450,7 @@
             "is_core": true,
             "industry": "['E']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_aff80b16a1cbfd91ab3a158048e5c99d4a053ab9ea757ed84141fa7a39e3411c"
@@ -1329,6 +1461,7 @@
             "is_core": true,
             "industry": "['E']",
             "priority": 4,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_16a3c8545732ca5cc0475714040bb4f4c0a04d7798bd440d2a00046f9d66aa78"
@@ -1339,6 +1472,7 @@
             "is_core": true,
             "industry": "['C', 'B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_d383e755da7eb069cb314574e9280024ff6a1efe48659cdb9bc733d49e3d404e"
@@ -1349,6 +1483,7 @@
             "is_core": true,
             "industry": "['C', 'B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_8571f5c9b8210c03558cc8de58aff199afe17135157d3f4a0e1269eb8888904c"
@@ -1359,6 +1494,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.0027431677177869964,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0022238663847427126,
             "id": "Cert_c01f10c61adcaa00ba6d4b85d30ec802bae76597915d7da4f8f094714ab0c597"
@@ -1369,6 +1505,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_9141c5d371da275669c4896c96ac246ad6dca2ae12570d8030cb9843810fbf9a"
@@ -1379,6 +1516,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_4589f3516514763341d2218bf56094281c85cafc58572c207ba8afe6eacaa0ec"
@@ -1389,6 +1527,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_38b8dc3b3f4525ffdec14ad0f90b8f94807c6cd00f54ef79f1968d7081f1c7f7"
@@ -1399,6 +1538,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_10199f8a50340406fd6ea8762fa3629f5e6414fa09266b47aff99ae4187b4f9e"
@@ -1409,6 +1549,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_81b9d2e4675aa408a56120ea5dc86afe69379b8edb56fb3b551f5528a5852f66"
@@ -1419,6 +1560,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 0.007306568220273805,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.004936663485810686,
             "id": "Domain_9b137c5215788c8e66a5ea2d45c7ec3af81d5b1521610b166b109a6701324742"
@@ -1429,6 +1571,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_896d7ec9820abadb37beb918ffa823175abfecdd95c962db5bf9f7121b22d78d"
@@ -1439,6 +1582,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a9f879357fbbef1612cdb3f9ff4de20af80a1fe4630877d4f6c24f333c0b7feb"
@@ -1449,6 +1593,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.02422704199353946,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.004701182965516691,
             "id": "Domain_ef6a36adce3940eba868b053f48ec421dae5b9565c19757e592a9f2c878dac29"
@@ -1459,6 +1604,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_39932488c107b68d1b26ff279c98777529ed8cf68e2f7d3ca786146480181435"
@@ -1469,6 +1615,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_da8e39d3ca8b7f60d0a09ae39ce86bd98ccd0c7895fb14c24ae85b649732e358"
@@ -1479,6 +1626,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.009536994308567913,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.005233868852984466,
             "id": "Domain_c2213cce44dfcc1c733ffbb2bd044d19bb5bb63c188095283327f1b9e7042154"
@@ -1489,6 +1637,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_346980d240393d6eff4df9cef6e97941fb8ba4272d7ea878067a1519df04c354"
@@ -1499,6 +1648,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_31ca322cc6d85224c18bf1b369afb4e4bc9e959c3d854454abc229940982cbfe"
@@ -1509,6 +1659,7 @@
             "is_core": true,
             "industry": "['I']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_5d4ddaa377834013d30d7425c6cd3e0afe573faf77c3278cc68c8c8d0ac573e8"
@@ -1519,6 +1670,7 @@
             "is_core": true,
             "industry": null,
             "priority": 1,
+            "betweenness": 0.002038147977234272,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.001811560889801108,
             "id": "ASN_1d624c9be374e9b85d0105f3fc5e474a305c294f11402195edd43d093b9d4ab9"
@@ -1529,6 +1681,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_31dd5aa52278c1897bfb3a664a83e41f3174c0dd1fc8db90b333734f1ead733b"
@@ -1539,6 +1692,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_44c636ff9b9f48ad5687710b70653f1a2eb3899e0848937c919c430d2c3b37e4"
@@ -1549,6 +1703,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_0c30d61616453c54253f375690812932d4242fe583e1d23e528a1adb21bd81f8"
@@ -1559,6 +1714,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_735c302f5a08dd63fed995162be9f3a9d408cb47fcd2b7914552e6824d122d95"
@@ -1569,6 +1725,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_965b7d19e3e9b308a17a075efba549130dc714d3eb911274568b1812e8eedb09"
@@ -1579,6 +1736,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_9d06e08473ac6d227f83152aa5ec7a61f0e34259ca2efa12fa20f92efed7bd1c"
@@ -1589,6 +1747,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_9db8398ed3ef916a79f1946e0b8520605891a6f642c2696b0d0670801be18c75"
@@ -1599,6 +1758,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_fd2e8dc58f40ef92621148bd3825e20dc5ad65b07b2b34398ce4e053f4bf73c0"
@@ -1609,6 +1769,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_6b2143d19632793bc7fa1fe93020f223c1721c1aa3e9599f27a905864c9b94d7"
@@ -1619,6 +1780,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_6c58b4e54203c2c11533b919c6067d7fcb9cd64a0433d3d9e3cadac8d98d311c"
@@ -1629,6 +1791,7 @@
             "is_core": true,
             "industry": null,
             "priority": 2,
+            "betweenness": 0.16433369225247385,
             "degree_centrality": 0.14646464646464646,
             "pagerank": 0.025554632828151628,
             "id": "Whois_Phone_f6974ce3fa84ae76d75b9211f3162155db77566a36c82549b66a9a3d966a928b"
@@ -1639,6 +1802,7 @@
             "is_core": true,
             "industry": "['I']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_5da32ee13fd1cb27f92b3f598722816903da898b5ae0ab7a4aab9899e3388193"
@@ -1649,6 +1813,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_228f73fe1e573b3d2e159e29b723e7b7bcf91a141b052eb8e2b2769ab60734de"
@@ -1659,6 +1824,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_961cc51c9d7f1cd91596f73356b5b4039deab7b78a97d33f413262020c2aadb1"
@@ -1669,6 +1835,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_8ef597c6cf913ef34a0b393daf23a004b0ba3bb9d8d8868ab6a1dc355c4d468b"
@@ -1679,6 +1846,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_a7eb1ab42b77f5806e61efe29fefa61bb58686f00f241c1753e7f399448e90f7"
@@ -1689,6 +1857,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.004614674665436087,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0037423709378029825,
             "id": "Cert_e72592e3cf6097989d7af61181669ba7c72fe3e7059ecf79f284391665d32fe5"
@@ -1699,6 +1868,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_d1773bc258ac5f800453b58a3ee402e36c1be7fc3548f62eb97ad8ec269c7fa4"
@@ -1709,6 +1879,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_8c65f12631d13e81f7ca84e1d9dac2c9409d31ec67036e8f9b2bd0bf9a3222c6"
@@ -1719,6 +1890,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_735c4771683e674e92ea551c4200f45eecad99b1fac38b3a95a9e987f6d9da5a"
@@ -1729,6 +1901,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_8e68a7e36a616af95a91e427ed6822f812a9f468a81813f75d8bb6c15bbe9b16"
@@ -1739,6 +1912,7 @@
             "is_core": true,
             "industry": null,
             "priority": 2,
+            "betweenness": 0.11536686663590218,
             "degree_centrality": 0.13131313131313133,
             "pagerank": 0.03168070760184456,
             "id": "Whois_Email_62fe1d0691991999225c173a7c6b4da96e9d590457cfb31befb84fc0e980c15e"
@@ -1749,6 +1923,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_929be096a52f14b3856807b98601477fe6f3e039cfc1a6972b7b56294508423d"
@@ -1759,6 +1934,7 @@
             "is_core": true,
             "industry": "['I']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a0e962fa2fbc72595cb818e6989ca2b0df8322b93178203d12d8ff721c5cae1b"
@@ -1769,6 +1945,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_ab191669a5554728bbfbfe823af06365873bcee68ec84abdad22976c072582d4"
@@ -1779,6 +1956,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.0008921704353176434,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0026337588321590664,
             "id": "IP_180ec840d57b66390033e9f0145b6dc76a7213c42d0992faeaaf5719ba7273a2"
@@ -1789,6 +1967,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_908b3ecdc7ed08edb4a9af450fd37133f1a8e831b31f7194c5b75802081b13bc"
@@ -1799,6 +1978,7 @@
             "is_core": true,
             "industry": "['A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_7d53fcf77d9515b392a3ecfd7944d3eb1b1d1ddca88549a3639d294142df3140"
@@ -1809,6 +1989,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_26c48479fc63a2916877b1df87b00977b5da89041e134553643d4e72e9bf96de"
@@ -1819,6 +2000,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_547658c900db41f85b764e43c1cdb28c141874e66e66423e2f3e1f06da66290b"
@@ -1829,6 +2011,7 @@
             "is_core": true,
             "industry": null,
             "priority": 2,
+            "betweenness": 0.12228887863405631,
             "degree_centrality": 0.13636363636363638,
             "pagerank": 0.03283245277173664,
             "id": "Whois_Name_d93c941eef173511e77515af6861025e9a2a52d597e27bf1825961c2690e66cd"
@@ -1839,6 +2022,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 7.888332761429209e-06,
             "degree_centrality": 0.010101010101010102,
             "pagerank": 0.0028233461294714843,
             "id": "Domain_6fb0f7a277e40d065409642924711dad150594c5a987801786da2980a287e245"
@@ -1849,6 +2033,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.001519850803659434,
             "id": "Domain_b8e5ab786da2df272ec5ae73af2b674b14736d5427fc80ce26a0d06f0f066003"
@@ -1859,6 +2044,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_07095e444e814ab1d40e693c9af393ca4e50d2bd55ad02451df5ae129d210f44"
@@ -1869,6 +2055,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_a5aff08c4bf8129c7502aa9efde751e16a045c1f30b13d85e9414601560758eb"
@@ -1879,6 +2066,7 @@
             "is_core": true,
             "industry": "['I']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_dbc55026dd372a67c8d274680ae52e0e64707cc418d38640a0076906e83d0d64"
@@ -1889,6 +2077,7 @@
             "is_core": true,
             "industry": "['C', 'A']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_33a4f3ee4ddf7c243cad988044b6a5467399e5da7c1aab01b4522339d8362c88"
@@ -1899,6 +2088,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_e8b1080e55cb2e80c73456a2aa321b3da4b97a3f3940f5f897f4c932676d4c69"
@@ -1909,6 +2099,7 @@
             "is_core": false,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.022235895332342034,
             "degree_centrality": 0.030303030303030304,
             "pagerank": 0.007666634178925323,
             "id": "Cert_392d981eaf712a3ecb8553b3b90974d538e484bad7ccff19f6ef89d1b6456226"
@@ -1919,6 +2110,7 @@
             "is_core": true,
             "industry": "['B']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_9993387ecda086bd88a7dd23389c865b891fdb03d9d24fc53a6f643c7251c561"
@@ -1929,6 +2121,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_ef009d056f7c9b31e8d62c8eedfeb6cbc43d8c2b10dadf85990b5d555b423007"
@@ -1939,6 +2132,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_c67309a07dc704559af0defb9dff96423deb8d501cb44f320d95fa2236b377f9"
@@ -1949,6 +2143,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_25c16d4b34076dcc4dcb4b1db9d5290e9587a3e248ee090d259421435290b542"
@@ -1959,6 +2154,7 @@
             "is_core": true,
             "industry": "['G']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_97a699e373cff76143baa92ba0a950dbd9af3ada9628d924c0fbc0ea787e8f4a"
@@ -1969,6 +2165,7 @@
             "is_core": true,
             "industry": null,
             "priority": 4,
+            "betweenness": 0.012408347433728146,
             "degree_centrality": 0.020202020202020204,
             "pagerank": 0.006431599327677517,
             "id": "IP_94fb4d47d3920b6a5b74a8ce9e304377460fdffdf6582eca97eda2037bbe0b47"
@@ -1979,6 +2176,7 @@
             "is_core": true,
             "industry": "['C']",
             "priority": 4,
+            "betweenness": 0.0,
             "degree_centrality": 0.005050505050505051,
             "pagerank": 0.0026851060547586334,
             "id": "Domain_50d311b4cfd70e3a531e1c14c4f284bb3efe11bba1948150887ca0655cc5d15d"
@@ -1989,6 +2187,7 @@
             "is_core": true,
             "industry": "[]",
             "priority": 3,
+            "betweenness": 1.9448820429040986e-05,
             "degree_centrality": 0.015151515151515152,
             "pagerank": 0.0030180625149069783,
             "id": "Domain_c5ee412dc070b09ec40ff13884116e6ef896eabcf9c5234160272823ab9edd9c"

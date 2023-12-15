@@ -312,10 +312,10 @@ def filter_subgraph(
     print("Nodes with non-empty industry: %d / %d" % (count, count_domain))
 
     # compute betweenness centrality and pagerank again, add as attributes
-    # bc = nx.betweenness_centrality(G)
+    bc = nx.betweenness_centrality(G)
     dc = nx.degree_centrality(G)
     pr = nx.pagerank(G)
-    # nx.set_node_attributes(G, bc, "betweenness")
+    nx.set_node_attributes(G, bc, "betweenness")
     nx.set_node_attributes(G, dc, "degree_centrality")
     nx.set_node_attributes(G, pr, "pagerank")
 
