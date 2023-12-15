@@ -26,6 +26,11 @@
 
 原始数据 `Node.csv`, `Link.csv` 应该放在该路径下。（这两个文件未被添加到 repo 中）
 
+- `answer` 子文件夹中存放的是每个子图的节点和边的csv文件（与原始数据格式相同，不带额外属性）。其他文件：
+  - `total.csv` 汇总了对每个子图的节点数和边数的统计
+  - `node_type.csv` 统计了每个子图的节点类型
+  - `link_type.csv` 统计了每个子图的边类型
+
 - `communities` 存放了对原始图进行社区检测的结果，一共891个 community。存放的数据为节点集
 
 - `community_subgraphs` 每个社区节点集对应的子图
