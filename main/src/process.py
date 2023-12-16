@@ -4,6 +4,9 @@ import pandas as pd
 import random
 import numpy as np
 
+random.seed(42)
+np.random.seed(42)
+
 import importlib
 
 rules = importlib.import_module("utils.global_rules")
@@ -120,7 +123,7 @@ def set_core(G, link_priority=rules["link_priority"]):
         num_ip = 0
         for neighbor, edge_data in G[node].items():
             relation = edge_data["relation"]
-            if link_priority[relation] == 4:
+            if link_priority[relation] <= 2:
                 num_weak_link += 1
             if G.nodes[neighbor]["type"] == "IP":
                 num_ip += 1
@@ -128,7 +131,7 @@ def set_core(G, link_priority=rules["link_priority"]):
         # set is_core for node
         if num_weak_link / len(G.nodes[node]) < 0.5:
             if G.nodes[node]["type"] == "Domain":
-                if num_ip < 2:
+                if num_ip <= 2:
                     G.nodes[node]["is_core"] = True
                 else:
                     G.nodes[node]["is_core"] = False
@@ -176,7 +179,6 @@ def filter_subgraph(
             print(*args)
 
     G = G_org.copy()
-    random.seed(42)
 
     myprint("Filtering subgraph...")
 

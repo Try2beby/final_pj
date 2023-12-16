@@ -1,0 +1,142 @@
+[
+    [
+        "Cert_bbe15474b14bdf9f8f8f401595e8a9c6285e844245946224bb11f58fc6196edf",
+        {
+            "name": "bbe15474b1",
+            "type": "Cert",
+            "is_core": false,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.8510819626994929,
+            "degree_centrality": 0.028469750889679714,
+            "pagerank": 0.0058184098863871695,
+            "score": 0.8853701234755598
+        }
+    ],
+    [
+        "Cert_1b22e6e2c9f9d7afd041a1a0ef2178dbaaf3248c4261496a382ff46520d55e71",
+        {
+            "name": "1b22e6e2c9",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.42336527232962595,
+            "degree_centrality": 0.06227758007117437,
+            "pagerank": 0.009611000531691127,
+            "score": 0.49525385293249147
+        }
+    ],
+    [
+        "Cert_4fe8af438e852464022dba847977e0e4200b073c5fc3af5f7f7f160b38d50552",
+        {
+            "name": "4fe8af438e",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.2400137020191448,
+            "degree_centrality": 0.1298932384341637,
+            "pagerank": 0.05973594162419179,
+            "score": 0.4296428820775003
+        }
+    ],
+    [
+        "Domain_9be5aee5cc57eca3293a22003b6e9a8d20afe217956a765930c53837c13f3772",
+        {
+            "name": "9be5aee5cc.com",
+            "type": "Domain",
+            "is_core": false,
+            "industry": "[]",
+            "priority": 3,
+            "betweenness": 0.11581389567840424,
+            "degree_centrality": 0.19572953736654802,
+            "pagerank": 0.015612113433282997,
+            "score": 0.32715554647823525
+        }
+    ],
+    [
+        "Cert_ab931590affbcf0ade15375ec8acaac7296e5eeed396dcf4c88615315515e493",
+        {
+            "name": "ab931590af",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.1340894817972482,
+            "degree_centrality": 0.07117437722419928,
+            "pagerank": 0.03280725660555986,
+            "score": 0.23807111562700733
+        }
+    ],
+    [
+        "IP_f9b588fa3410ab89fa0e50b011c9ac8ddfa4a3125ea3df13fa4598faa5e15f8a",
+        {
+            "name": "45.114.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.06106147514998638,
+            "degree_centrality": 0.14056939501779359,
+            "pagerank": 0.021450889247198734,
+            "score": 0.2230817594149787
+        }
+    ],
+    [
+        "Cert_2a478163d7fd543417570f2dbfcbf94a06a696a48a7247ad88605f369f916564",
+        {
+            "name": "2a478163d7",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.12411745675300208,
+            "degree_centrality": 0.06583629893238434,
+            "pagerank": 0.030358442407954087,
+            "score": 0.22031219809334052
+        }
+    ],
+    [
+        "Cert_3fd4eef72706be7d50bc960b4cd740ac85029f51e707298ca42624d07871291e",
+        {
+            "name": "3fd4eef727",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.12411745675300208,
+            "degree_centrality": 0.06583629893238434,
+            "pagerank": 0.030358442407954087,
+            "score": 0.22031219809334052
+        }
+    ],
+    [
+        "Cert_af5554564b0edbbfc45db88554304dddf3a1b25466b4eebb1b519aa8be37e05f",
+        {
+            "name": "af5554564b",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.11073261397732824,
+            "degree_centrality": 0.05871886120996441,
+            "pagerank": 0.02709293141192853,
+            "score": 0.19654440659922118
+        }
+    ],
+    [
+        "IP_cd3ce4957d196a1a2871f3b850cb5ab89ffa2643033d7b05319951f2be9322e0",
+        {
+            "name": "164.88.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.09187780879545573,
+            "degree_centrality": 0.0693950177935943,
+            "pagerank": 0.014610598547988029,
+            "score": 0.17588342513703809
+        }
+    ]
+]
