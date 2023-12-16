@@ -207,7 +207,7 @@ function DrawMainview(loadData){
 
 
     // 读取核心资产数据集asset.csv
-    d3.csv("asset.csv").then(function(nodeData) {
+    d3.csv("./data/asset.csv").then(function(nodeData) {
         // 定义一个变量，表示按钮的状态
         var buttonState1 = false;
 
@@ -230,7 +230,7 @@ function DrawMainview(loadData){
     });
 
     // 读取关键链路数据集road.csv
-    d3.csv("road.csv").then(function(roadData) {
+    d3.csv("./data/road.csv").then(function(roadData) {
         // 定义一个变量，表示按钮的状态
         var buttonState2 = false;
 
