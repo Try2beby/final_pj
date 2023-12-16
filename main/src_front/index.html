@@ -6,15 +6,42 @@
         svg {
             border: 1px solid black;
         }
+
+        h2 {
+		  line-height: 1em;
+		  font-size: 1.75em;
+		  font-weight: 900;
+		  color: #000;
+		}
+
+        input {
+		  display: block;
+		  width: 150px;
+		  margin: 10px 0px 0px 0px;
+          position: absolute;
+          top: 560px; 
+          left: 20px; 
+		}
+
+		/* slider 旁边的年份 */
+		h2.group {
+		  margin: 10px 0px 0px 0px;
+		  font-size: 1.0em;
+		  font-weight: 700;
+          position: absolute;
+          top: 540px; 
+          left: 20px; 
+		}
+
         #button1 {
             position: absolute;
-            top: 480px; /* Adjust the top position as needed */
-            left: 20px; /* Adjust the left position as needed */
+            top: 420px; 
+            left: 20px; 
         }
         #button2 {
             position: absolute;
-            top: 540px; /* Adjust the top position as needed */
-            left: 20px; /* Adjust the left position as needed */
+            top: 480px; 
+            left: 20px; 
         }
         .node {
             stroke: #fff;
@@ -38,7 +65,7 @@
         .tooltip {
             position: absolute;
             text-align: match-parent;
-            width: 510px;
+            width: auto;
             height: 20px;
             padding: 2px;
             font: 12px sans-serif;
@@ -54,6 +81,8 @@
     <svg width="750" height="600"></svg>
     <button id="button1">标记核心资产</button>
     <button id="button2">显示关键链路</button>
+    <h2 class="group">Group</h2>
+    <div class="slider"></div>
     <script type="text/javascript" src="./main_view.js"></script>
 </body>
 </html>
