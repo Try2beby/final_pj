@@ -204,14 +204,13 @@ function DrawMainview(loadData){
     var types = Array.from(new Set(nodes.map(function(d) { return d.type; })));
     types.sort(d3.ascending);   // 使图例按固定顺序排列
 
-    // 添加图例的矩形元素，表示节点的颜色
-    legend.selectAll("rect")
+    // 添加图例的圆形元素，表示节点的颜色
+    legend.selectAll("circle")
         .data(types)
-        .enter().append("rect")
-        .attr("x", 0)
-        .attr("y", function(d, i) { return i * 20; })
-        .attr("width", 10)
-        .attr("height", 10)
+        .enter().append("circle")
+        .attr("cx", 5) // 设置圆形的 x 坐标
+        .attr("cy", function(d, i) { return i * 20 + 5; }) // 设置圆形的 y 坐标
+        .attr("r", 5) // 设置圆形的半径
         .attr("fill", function(d) { return color(d); });
 
     // 添加图例的文本元素，表示节点的类型
