@@ -40,8 +40,9 @@ function DrawMainview(loadData){
     // 定义节点大小比例尺，根据节点的连接数分配不同的半径
     var size = d3.scaleLinear().range([5, 15]);
         
-    // 定义边颜色比例尺，根据连接的类型分配不同的颜色
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    // 定义节点颜色比例尺，根据节点的类型分配不同的颜色
+    var color = d3.scaleOrdinal(d3.schemeTableau10)
+                .domain(['Domain', 'IP', 'Cert', 'Whois_Name', 'Whois_Phone', 'Whois_Email', 'IP_C', 'ASN']);
 
     let strength_p = loadData[3];
     // 定义力导向图模拟器
@@ -78,7 +79,9 @@ function DrawMainview(loadData){
         .enter().append("line")
         .attr("class", "link")
         .attr("stroke-width", function(d) { return d.weight; })
-        .attr("stroke", function(d) { return color(d.relation); }); // 根据连接的类型分配边的颜色
+        .attr("stroke", '#aaa'); 
+        // 根据连接的类型分配边的颜色
+        // function(d) { return color(d.relation); }
 
     // 添加节点元素
     var node = svg.append("g")
@@ -88,7 +91,7 @@ function DrawMainview(loadData){
         .enter().append("circle")
         .attr("class", "node")
         .attr("r", function(d) { return size(d.degree_centrality); }) // 根据节点的度中心性分配节点的大小
-        .attr("fill", "#ccc")
+        .attr("fill", function(d) { return color(d.type); })  // 根据节点的type分配不同的颜色
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
@@ -194,11 +197,16 @@ function DrawMainview(loadData){
         .attr("transform", "translate(20,20)");
 
     // 获取连接的类型的数组
-    var relations = Array.from(new Set(links.map(function(d) { return d.relation; })));
+    // var relations = Array.from(new Set(links.map(function(d) { return d.relations; })));
+    // relations.sort(d3.ascending);   // 使图例按固定顺序排列
 
-    // 添加图例的矩形元素，表示边的颜色
+    // 获取节点的类型的数组
+    var types = Array.from(new Set(nodes.map(function(d) { return d.type; })));
+    types.sort(d3.ascending);   // 使图例按固定顺序排列
+
+    // 添加图例的矩形元素，表示节点的颜色
     legend.selectAll("rect")
-        .data(relations)
+        .data(types)
         .enter().append("rect")
         .attr("x", 0)
         .attr("y", function(d, i) { return i * 20; })
@@ -206,9 +214,9 @@ function DrawMainview(loadData){
         .attr("height", 10)
         .attr("fill", function(d) { return color(d); });
 
-    // 添加图例的文本元素，表示连接的类型
+    // 添加图例的文本元素，表示节点的类型
     legend.selectAll("text")
-        .data(relations)
+        .data(types)
         .enter().append("text")
         .attr("x", 15)
         .attr("y", function(d, i) { return i * 20 + 9; })
