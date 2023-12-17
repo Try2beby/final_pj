@@ -61,6 +61,20 @@ def find_key_path(group_str: str):
 
         return
 
+        def find_key_path_for_list(graph, node_list):
+            key_path_list = []
+            if len(node_list) < 2:
+                return key_path_list
+            for i in range(len(node_list)):
+                for j in range(i + 1, len(node_list)):
+                    path = nx.shortest_path(
+                        graph, node_list[i][0], node_list[j][0], weight="weight"
+                    )
+                    key_path_list[str((node_list[i][0], node_list[j][0]))] = (
+                        path if len(path) <= 4 else []
+                    )
+            return key_path_list
+
     print("find key path for group: ", group_str)
     # read the group
     graph = nx.readwrite.json_graph.node_link_graph(
