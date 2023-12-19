@@ -17,7 +17,7 @@
 
 - `community_subgraphs` 每个社区节点集对应的子图
 
-- `subgraph` 每个文件是：以单个团伙所有线索为起点，在原始数据中搜索3跳内的节点，再经过一定的筛选得到的子图。（看作无向图是连通的）
+- `subgraph` 每个文件是：以单个团伙所有线索为起点，在原始数据中搜索一定跳数内的节点，再经过一定的筛选得到的子图。（看作无向图是连通的）
   
   - 按业务规则
   
@@ -28,7 +28,36 @@
 
 ## 子图挖掘说明
 
-### 筛选规则
+### 子图挖掘
+
+按节点重要性和边重要性选择不同的挖掘深度，具体跳数如下表
+
+| 节点重要性得分 \ 边重要性得分 |  1   |  2   |  3   |  4   |
+| :---------------------------: | :--: | :--: | :--: | :--: |
+|               4               |  0   |  1   |  2   |  3   |
+|               3               |  0   |  1   |  2   |  3   |
+|               2               |  0   |  1   |  2   |  2   |
+|               1               |  0   |  0   |  2   |  2   |
+
+### 子图筛选
+
+筛选参数
+
+|             参数名              |                             说明                             |
+| :-----------------------------: | :----------------------------------------------------------: |
+|        `countThreshold`         |       对应 **子图挖掘业务规则 4** 中**成百上千**的阈值       |
+|       `countKeepPercent`        |          保留同类型邻居节点（关联关系亦相同）的比例          |
+|       `pagerankQuantile`        | `pr_quantile = np.quantile(list(pr.values()), pagerankQuantile)` eg: `pagerankQuantile=0.9`，则`pr_quantile`为0.9分位数 |
+|   `degreeCentralityQuantile`    |                                                              |
+|        `degreeQuantile`         |                                                              |
+| `emptyIndustryPercentThreshold` |                                                              |
+
+1. 统计每个节点同类型邻居节点的比例，如果同类型节点数超过 `countThreshold`，按度排序，保留前 `countKeepPercent` 的节点
+2. 计算`pagerankQuantile degreeCentralityQuantile`分位数。遍历节点集，如果该节点周围的**合法**（指有非空 industry 的domain类型节点）邻居节点占比超过`emptyIndustryPercentThreshold` 则保留，否则，若其`pr`和`dc`小于分位数，则将该节点移除。
+3. 取极大连通子图
+4. 计算 `degreeQuantile` 分位数。遍历节点集，如果该节点**非法**（空industry的domain类型节点）且度小于分位数，且其邻居节点中度大于分位数的节点数少于2，则将该节点移除
+5. 取极大连通子图
+6. 计算 `bc dc pr` 
 
 
 ### 节点属性
