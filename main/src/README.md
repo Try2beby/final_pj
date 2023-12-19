@@ -96,6 +96,10 @@ g4(3D图)
 
 前端将刷选到的节点发送到后端，根据所给节点计算关键链路发送回前端
 
+main/src/utils/key_nodes_path.py中find_key_path_for_node_list函数\
+输入：graph、node_list\
+输出：key_path_list
+
 
 
 

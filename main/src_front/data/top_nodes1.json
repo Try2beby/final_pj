@@ -1,0 +1,142 @@
+[
+    [
+        "Cert_fe794a69eacd63b21245bf4eda826222fc6c5862bebf77aa05459cb308cfd063",
+        {
+            "name": "fe794a69ea",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "priority": 4,
+            "betweenness": 0.8580350570482149,
+            "degree_centrality": 0.631578947368421,
+            "pagerank": 0.2845170109453422,
+            "score": 1.774131015361978
+        }
+    ],
+    [
+        "Domain_61befc7014010dffed9239b8a133396e1a88fa822703b677b123268eb16be3f7",
+        {
+            "name": "61befc7014.com",
+            "type": "Domain",
+            "is_core": true,
+            "industry": "['B']",
+            "priority": 4,
+            "betweenness": 0.4630971342631963,
+            "degree_centrality": 0.028708133971291863,
+            "pagerank": 0.007099957524907988,
+            "score": 0.49890522575939616
+        }
+    ],
+    [
+        "Whois_Email_5a3d16b7df3d815d5f3436bd5dd5c5e1054ee7cb74d4fd8d9efdf3af362a4a18",
+        {
+            "name": "54498xxxxx@xxx.xxx",
+            "type": "Whois_Email",
+            "is_core": true,
+            "industry": null,
+            "priority": 2,
+            "betweenness": 0.1993006993006993,
+            "degree_centrality": 0.14832535885167464,
+            "pagerank": 0.02647452956922144,
+            "score": 0.3741005877215954
+        }
+    ],
+    [
+        "Whois_Name_db0925a5aeb1849fa7b41f7a29c1192d38e12e97fb6e82e72e894e3c733130ef",
+        {
+            "name": "Linxxxxx Xu",
+            "type": "Whois_Name",
+            "is_core": true,
+            "industry": null,
+            "priority": 2,
+            "betweenness": 0.15858483621641517,
+            "degree_centrality": 0.13875598086124402,
+            "pagerank": 0.024217730482902322,
+            "score": 0.3215585475605615
+        }
+    ],
+    [
+        "Whois_Phone_f6974ce3fa84ae76d75b9211f3162155db77566a36c82549b66a9a3d966a928b",
+        {
+            "name": "+86.533xxxxx",
+            "type": "Whois_Phone",
+            "is_core": true,
+            "industry": null,
+            "priority": 2,
+            "betweenness": 0.15858483621641517,
+            "degree_centrality": 0.13875598086124402,
+            "pagerank": 0.024217730482902322,
+            "score": 0.3215585475605615
+        }
+    ],
+    [
+        "Domain_f3554b666038baffa5814c319d3053ee2c2eb30d31d0ef509a1a463386b69845",
+        {
+            "name": "f3554b6660.com",
+            "type": "Domain",
+            "is_core": false,
+            "industry": "['G']",
+            "priority": 4,
+            "betweenness": 0.25616276436114477,
+            "degree_centrality": 0.04784688995215311,
+            "pagerank": 0.01177655894920221,
+            "score": 0.3157862132625001
+        }
+    ],
+    [
+        "Whois_Name_d93c941eef173511e77515af6861025e9a2a52d597e27bf1825961c2690e66cd",
+        {
+            "name": "Domxxxxxmin",
+            "type": "Whois_Name",
+            "is_core": true,
+            "industry": null,
+            "priority": 2,
+            "betweenness": 0.11605171144644828,
+            "degree_centrality": 0.1291866028708134,
+            "pagerank": 0.031112695855458394,
+            "score": 0.27635101017272007
+        }
+    ],
+    [
+        "Whois_Email_62fe1d0691991999225c173a7c6b4da96e9d590457cfb31befb84fc0e980c15e",
+        {
+            "name": "contaxxxxx@xxx.xxx",
+            "type": "Whois_Email",
+            "is_core": true,
+            "industry": null,
+            "priority": 2,
+            "betweenness": 0.10984081707765918,
+            "degree_centrality": 0.12440191387559808,
+            "pagerank": 0.030021273756252916,
+            "score": 0.26426400470951017
+        }
+    ],
+    [
+        "Domain_cee489b4e75d3b79f86fc13516688cb4ed6a84e39f139f25014bf97c0d7bfbf1",
+        {
+            "name": "cee489b4e7.com",
+            "type": "Domain",
+            "is_core": true,
+            "industry": "[]",
+            "priority": 3,
+            "betweenness": 0.14560081479319226,
+            "degree_centrality": 0.03349282296650718,
+            "pagerank": 0.00669033818327713,
+            "score": 0.18578397594297658
+        }
+    ],
+    [
+        "Domain_91de97019b99f9e4b03f9d1bec9fd8925b15a3687a10ea0124baab42e36170b7",
+        {
+            "name": "91de97019b.com",
+            "type": "Domain",
+            "is_core": true,
+            "industry": "[]",
+            "priority": 3,
+            "betweenness": 0.14560081479319226,
+            "degree_centrality": 0.03349282296650718,
+            "pagerank": 0.006690338183277129,
+            "score": 0.18578397594297658
+        }
+    ]
+]
