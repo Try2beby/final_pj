@@ -1,7 +1,11 @@
 import { LoadDataForGraph, ForceDirectedGraph, UpdateGraph } from "./utils.js";
+import { CreateAllSlider, CreateAllButton, CreateSelect } from "./addComponents.js";
 
 async function main() {
-    UpdateGraph(1);
+    await UpdateGraph(1);
+    CreateSelect();
+    CreateAllSlider();
+    CreateAllButton();
 }
 
 main();
