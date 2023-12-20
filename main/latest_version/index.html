@@ -114,11 +114,9 @@
     <div id="all-container">
 
         <div id="main_view">
-            <svg id="svg" width="750" height="600"></svg>
-            <button id="button1">标记核心资产</button>
-            <button id="button2">显示关键链路</button>
-            <h2 class="group">Group</h2>
-            <div class="slider"></div>
+            <div id="graph"></div>
+            <!-- <h2 class="group">Group</h2> -->
+            <!-- <div class="slider"></div> -->
         </div>
 
         <div id="side_view">
@@ -147,11 +145,8 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://unpkg.com/d3-sankey@0"></script>
 
-
-<script type="text/javascript" src="./main_view.js"></script>
-<script type="text/javascript" src="./indus_sum.js"></script>
-<script type="text/javascript" src="./fire_cord.js"></script>
-<script type="text/javascript" src="./sankey.js"></script>
-<script type="text/javascript" src="./parallel.js"></script>
+<script src="./utils.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+<script src="./global.js"></script>
 
 </html>
