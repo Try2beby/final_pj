@@ -5,33 +5,15 @@
     <title>黑灰产网络挖掘</title>
     <!-- D3模块 -->
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* background-color: #ccc; */
+        }
+
         svg {
             border: 1px solid black;
-        }
-
-        #button1 {
-            position: absolute;
-            top: 480px;
-            /* Adjust the top position as needed */
-            left: 20px;
-            /* Adjust the left position as needed */
-        }
-
-        #button2 {
-            position: absolute;
-            top: 540px;
-            /* Adjust the top position as needed */
-            left: 20px;
-            /* Adjust the left position as needed */
-        }
-
-        .node {
-            stroke: #fff;
-            stroke-width: 1.5px;
-        }
-
-        .link {
-            stroke-opacity: 0.6;
         }
 
         .legend {
@@ -48,7 +30,7 @@
             font-size: 8px;
         }
 
-        .tooltip {
+        /* .tooltip {
             position: absolute;
             text-align: match-parent;
             width: 510px;
@@ -59,86 +41,168 @@
             border: 0px;
             border-radius: 8px;
             pointer-events: none;
-        }
+        } */
 
-        #main_view {
-            float: left;
-        }
 
-        #parallel {
-            float: left;
-        }
 
-        #sankey {
-            float: left;
-        }
-
-        #fire_cord {
-            float: left;
-        }
-
-        /* put div in #top-container in a row */
-        #top-container {
+        #topleft-container {
             display: flex;
             flex-direction: row;
+            justify-content: center;
         }
 
-        #top-container svg {
-            width: 250px;
-            height: 200px;
+        #bottomleft-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
         }
 
-        /* put div in #bottom-container in a col */
-        #bottom-container {
+        /* #bottomleft-container svg {
+            width: 475px;
+            height: 226px;
+        } */
+
+        .left {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-
-        #bottom-container svg {
-            width: 500px;
-            height: 200px;
+            justify-content: center;
         }
 
         #all-container {
             display: flex;
             flex-direction: row;
-            /* center */
             justify-content: center;
         }
+
+        #right-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* #right-container svg {
+            width: 400px;
+            height: 338px;
+        } */
+
+        #slider {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            background-color: antiquewhite;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+        }
+
+        #select {
+            width: 160px;
+            height: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            /* 添加边框 */
+            border-radius: 4px;
+            /* 添加圆角 */
+            background-color: #f8f8f8;
+            /* 更改背景颜色 */
+            font-size: 14px;
+            /* 更改字体大小 */
+            color: #333;
+            /* 更改字体颜色 */
+            padding: 5px;
+            /* 添加内边距 */
+        }
+
+        .labelValueDiv {
+            display: flex;
+            justify-content: space-between;
+            width: 156px;
+            background-color: #f0f0f0;
+            /* 添加背景颜色 */
+            padding: 4px;
+            /* 添加内边距 */
+            border-radius: 5px;
+            /* 添加圆角 */
+            margin-bottom: 10px;
+            /* 添加下边距 */
+        }
+
+        .sliderDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 160px;
+            background-color: #f0f0f0;
+            /* 添加背景颜色 */
+            padding: 4px;
+            /* 添加内边距 */
+            border-radius: 5px;
+            /* 添加圆角 */
+            margin-bottom: 10px;
+            /* 添加下边距 */
+        }
+
+        #button {
+            position: absolute;
+            top: 60%;
+            left: 21%;
+            display: flex;
+        }
+
+        button {
+            background-color: #13768c;
+            /* 设置背景颜色 */
+            color: white;
+            /* 设置文本颜色 */
+            padding: 5px 5px;
+            /* 设置内边距 */
+            text-align: center;
+            /* 设置文本对齐方式 */
+            text-decoration: none;
+            /* 移除文本装饰 */
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            /* 设置外边距 */
+            cursor: pointer;
+            /* 设置光标样式 */
+            border-radius: 4px;
+            /* 设置边框圆角 */
+        }
+
+        #button button:hover {
+            background-color: #0d5c6d;
+            /* 设置背景颜色 */
+        }
+
+        .tippy-box[data-theme~="myTheme"] {
+            background-color: #b2d6d1;
+        }
+
+        /* .tooltip {
+            background: rgb(219, 220, 220);
+        } */
     </style>
 
 </head>
 
 <body>
     <div id="all-container">
-
-        <div id="main_view">
-            <svg id="svg" width="750" height="600"></svg>
-            <button id="button1">标记核心资产</button>
-            <button id="button2">显示关键链路</button>
-            <h2 class="group">Group</h2>
-            <div class="slider"></div>
+        <div id="left-container">
+            <div id="topleft-container" class="left">
+                <div id="slider"></div>
+                <div id="graph"></div>
+                <div id="button"></div>
+            </div>
+            <div id="bottomleft-container" class="left">
+                <div id="parallel"></div>
+                <div id="sankey"></div>
+            </div>
         </div>
-
-        <div id="side_view">
-            <div id="top-container" class="side-container">
-                <div id="indus_sum">
-                    <svg id="svg_hist"></svg>
-                </div>
-                <div id="indus_detail">
-                    <svg id="svg_indus_detail"></svg>
-                </div>
-            </div>
-
-            <div id="bottom-container" class="side-container">
-                <div id="parallel">
-                    <svg id="svg_parallel"></svg>
-                </div>
-                <div id="histogram">
-                    <svg id="svg_hist"></svg>
-                </div>
-            </div>
+        <div id="right-container">
+            <div id="industry_histogram"></div>
+            <div id="firecord"></div>
         </div>
     </div>
 
@@ -146,12 +210,13 @@
 </body>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://unpkg.com/d3-sankey@0"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 
-
-<script type="text/javascript" src="./main_view.js"></script>
-<script type="text/javascript" src="./indus_sum.js"></script>
-<script type="text/javascript" src="./fire_cord.js"></script>
-<script type="text/javascript" src="./sankey.js"></script>
-<script type="text/javascript" src="./parallel.js"></script>
+<script src="./utils.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+<script src="./addSubplot.js" type="module"></script>
+<script src="./addComponents.js" type="module"></script>
+<script src="./global.js"></script>
 
 </html>

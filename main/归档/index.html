@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>黑灰产网络挖掘</title>
+    <!-- D3模块 -->
+    <style>
+        svg {
+            border: 1px solid black;
+        }
+
+        #button1 {
+            position: absolute;
+            top: 480px;
+            /* Adjust the top position as needed */
+            left: 20px;
+            /* Adjust the left position as needed */
+        }
+
+        #button2 {
+            position: absolute;
+            top: 540px;
+            /* Adjust the top position as needed */
+            left: 20px;
+            /* Adjust the left position as needed */
+        }
+
+        .node {
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .link {
+            stroke-opacity: 0.6;
+        }
+
+        .legend {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        .highlight {
+            stroke: #f00;
+            stroke-width: 3px;
+        }
+
+        .label {
+            font-size: 8px;
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: match-parent;
+            width: 510px;
+            height: 20px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: rgb(219, 220, 220);
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        #main_view {
+            float: left;
+        }
+
+        #parallel {
+            float: left;
+        }
+
+        #sankey {
+            float: left;
+        }
+
+        #fire_cord {
+            float: left;
+        }
+
+        /* put div in #top-container in a row */
+        #top-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #top-container svg {
+            width: 250px;
+            height: 200px;
+        }
+
+        /* put div in #bottom-container in a col */
+        #bottom-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #bottom-container svg {
+            width: 500px;
+            height: 200px;
+        }
+
+        #all-container {
+            display: flex;
+            flex-direction: row;
+            /* center */
+            justify-content: center;
+        }
+
+        #slider-container {
+            width: 200px;
+            height: 500px;
+        }
+
+        .slider {
+            /* width: 300px;
+            margin: 30px auto; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="all-container">
+        <div id="slider-container">
+            <div id="slider"></div>
+            <div id="slider-value"></div>
+        </div>
+        <div id="main_view">
+            <div id="graph"></div>
+            <!-- <h2 class="group">Group</h2> -->
+            <!-- <div class="slider"></div> -->
+        </div>
+
+        <div id="side_view">
+            <div id="top-container" class="side-container">
+                <div id="industry_histogram"></div>
+                <div id="firecord"></div>
+            </div>
+
+            <div id="bottom-container" class="side-container">
+                <div id="parallel"></div>
+                <div id="sankey"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/d3-sankey@0"></script>
+
+<script src="./utils.js" type="module"></script>
+<script src="./main.js" type="module"></script>
+<script src="./global.js"></script>
+
+</html>
