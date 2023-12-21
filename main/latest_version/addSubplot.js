@@ -100,9 +100,15 @@ function Histogram() {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // 定义颜色比例尺
-    var colorScale = d3.scaleOrdinal()
-        .domain(industry_count.map(function (d) { return d.industry; }))
-        .range(["#0d96f8", "#65cafe", "#8edffc", "#d9f6fe", "#0d96f8", "#65cafe", "#8edffc", "#d9f6fe"]);
+    //var colorScale = d3.scaleOrdinal()
+        //.domain(industry_count.map(function (d) { return d.industry; }))
+        //.range(["#0d96f8", "#65cafe", "#8edffc", "#d9f6fe", "#0d96f8", "#65cafe", "#8edffc", "#d9f6fe"]);
+
+    
+    // 定义颜色比例尺
+var colorScale = d3.scaleOrdinal()
+.domain(industry_count.map(function(d) { return d.industry; }))
+.range(["#ebc4c3", "#cbdae7", "#b7d2e2", "#aebbe3", "#9ec6d7", "#ebc4c3", "#ffe6db", "#b6dce9"]);
 
     // 绘制柱子
     g.selectAll("rect")
