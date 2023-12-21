@@ -150,6 +150,9 @@ function Firecord() {
     const height = grid.fire.height;
     const data = params.links_csv;
 
+    // clear
+        d3.select("#firecord").selectAll("*").remove();
+
     // 创建 SVG 元素
     const svg_fire = d3
         .select("#firecord")
