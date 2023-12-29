@@ -102,7 +102,7 @@ function Histogram() {
     // 定义颜色比例尺
     var colorScale = d3.scaleOrdinal()
         .domain(industry_count.map(function (d) { return d.industry; }))
-        .range(["#0d96f8", "#65cafe", "#8edffc", "#d9f6fe", "#0d96f8", "#65cafe", "#8edffc", "#d9f6fe"]);
+        .range(["#ebc4c3", "#cbdae7", "#b7d2e2", "#aebbe3", "#9ec6d7", "#ebc4c3", "#ffe6db", "#b6dce9"]);
 
     // 绘制柱子
     g.selectAll("rect")
@@ -150,6 +150,8 @@ function Firecord() {
     const height = grid.fire.height;
     const data = params.links_csv;
 
+    // clear
+    d3.select("#firecord").selectAll("*").remove();
     // 创建 SVG 元素
     const svg_fire = d3
         .select("#firecord")
