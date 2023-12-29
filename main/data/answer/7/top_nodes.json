@@ -1,0 +1,132 @@
+[
+    [
+        "Cert_cb7bb23b77f62120467c5a76cff2831e3cc49144c13cc78dca11a5ef93796310",
+        {
+            "name": "cb7bb23b77",
+            "type": "Cert",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.7746180679882384,
+            "degree_centrality": 0.03931451612903226,
+            "pagerank": 0.01284639319115376,
+            "score": 0.8267789773084244
+        }
+    ],
+    [
+        "IP_CIDR_083f0a88ae00cb0d3441bbcfb2d9c01a2dff066a2bd51daf315f5ba7baf685ab",
+        {
+            "name": "154.215.xxx.0/24",
+            "type": "IP_C",
+            "is_core": false,
+            "industry": null,
+            "betweenness": 0.5124599215520329,
+            "degree_centrality": 0.011088709677419355,
+            "pagerank": 0.0012546631940986116,
+            "score": 0.5248032944235509
+        }
+    ],
+    [
+        "IP_a8dd53879c221176e88e98c61f27dacd312de12f95ae67b3ffd2641c9f2c8812",
+        {
+            "name": "154.215.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.2210577319531677,
+            "degree_centrality": 0.05846774193548387,
+            "pagerank": 0.026211212933826288,
+            "score": 0.30573668682247784
+        }
+    ],
+    [
+        "IP_561f7551cea491b9d8956fe90729090124b2ad2da2c830b6bf41d1e45bc69557",
+        {
+            "name": "154.215.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.17765534976074998,
+            "degree_centrality": 0.06149193548387097,
+            "pagerank": 0.027972320814663547,
+            "score": 0.26711960605928453
+        }
+    ],
+    [
+        "IP_0f866f3d8e57baf5cf789251e14b638b15ba495a6fe2d0b6859280e374acb01d",
+        {
+            "name": "154.215.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.19728429521608343,
+            "degree_centrality": 0.04536290322580645,
+            "pagerank": 0.02053058020215998,
+            "score": 0.26317777864404984
+        }
+    ],
+    [
+        "IP_472b72cd6d582e8d526eb93c53369ea4bacc2ff582f769be47395cbcd48810ed",
+        {
+            "name": "154.215.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.18648854475223103,
+            "degree_centrality": 0.04032258064516129,
+            "pagerank": 0.017893215030214554,
+            "score": 0.24470434042760686
+        }
+    ],
+    [
+        "IP_fe8a2a0aaf1c77b38cb831848a392c57d99be3b50e27ec5b6e8c3507488df008",
+        {
+            "name": "154.215.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.1324623221900329,
+            "degree_centrality": 0.07056451612903225,
+            "pagerank": 0.032168046986422,
+            "score": 0.23519488530548716
+        }
+    ],
+    [
+        "Domain_98fa367bd4b90bfcb48114fbbd44a7ee1841b3f87b5046d9f7a110a53aadbf6e",
+        {
+            "name": "98fa367bd4.com",
+            "type": "Domain",
+            "is_core": true,
+            "industry": "['B']",
+            "betweenness": 0.17573856916549954,
+            "degree_centrality": 0.0030241935483870967,
+            "pagerank": 0.001194022784281772,
+            "score": 0.1799567854981684
+        }
+    ],
+    [
+        "Domain_f5f16f459dd1fdaef99d22887856e74af5aa2b20884becd90e8705bd0a4af030",
+        {
+            "name": "f5f16f459d.com",
+            "type": "Domain",
+            "is_core": true,
+            "industry": "['B']",
+            "betweenness": 0.17173106344194528,
+            "degree_centrality": 0.0020161290322580645,
+            "pagerank": 0.0008213956866208777,
+            "score": 0.1745685881608242
+        }
+    ],
+    [
+        "IP_1e78070c8579eaaf30f576bbe03cef4d5ce59de52be64701cdd8232a405fee3e",
+        {
+            "name": "154.215.xxx.xxx",
+            "type": "IP",
+            "is_core": true,
+            "industry": null,
+            "betweenness": 0.09831426385859836,
+            "degree_centrality": 0.05141129032258064,
+            "pagerank": 0.023703450286913452,
+            "score": 0.17342900446809245
+        }
+    ]
+]

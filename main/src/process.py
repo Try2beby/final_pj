@@ -93,9 +93,6 @@ def get_subgraph(G: nx.Graph, start_nodes: list, Jump_limit: dict):
                 edges_dfs = nx.dfs_edges(G, source=edge[1], depth_limit=limit)
                 result.update(edges_dfs)
     subgraph = G.edge_subgraph(result).copy()
-    print("#nodes in subgraph: ", subgraph.number_of_nodes())
-    print("#edges in subgraph: ", subgraph.number_of_edges())
-
     return subgraph
 
 
@@ -143,6 +140,19 @@ def set_core(G, link_priority=rules["link_priority"]):
     return G
 
 
+def validate_node_industry(G, node):
+    if G.nodes[node]["type"] == "Domain":
+        try:
+            industry = G.nodes[node]["industry"]
+            if industry == "[]":
+                return False
+            else:
+                return True
+        except:
+            return False
+    return False
+
+
 def filter_subgraph(
     G_org: nx.Graph,
     countThreshold=100,
@@ -154,18 +164,6 @@ def filter_subgraph(
     scaleThreshold=400,
     verbose=False,
 ):
-    def validate_node_industry(node):
-        if G.nodes[node]["type"] == "Domain":
-            try:
-                industry = G.nodes[node]["industry"]
-                if industry == "[]":
-                    return False
-                else:
-                    return True
-            except:
-                return False
-        return False
-
     def remove_nodes(nodes_to_remove):
         # remove nodes
         G.remove_nodes_from(list(nodes_to_remove))
@@ -228,7 +226,7 @@ def filter_subgraph(
         valid_neighbors_set = set()
         node_neighbors = G.neighbors(node)
         for neighbor in node_neighbors:
-            if validate_node_industry(neighbor):
+            if validate_node_industry(G, neighbor):
                 valid_neighbors += 1
                 valid_neighbors_set.add(neighbor)
 
@@ -283,7 +281,7 @@ def filter_subgraph(
     myprint("Degree quantile: ", degree_quantile)
     nodes_to_remove = set()
     for node in G.nodes():
-        if not validate_node_industry(node) and G.degree(node) <= degree_quantile:
+        if not validate_node_industry(G, node) and G.degree(node) <= degree_quantile:
             # if any neighbor have degree > degree_quantile, keep this node
             keep = False
             count = 0

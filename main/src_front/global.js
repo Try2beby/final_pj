@@ -42,8 +42,8 @@ grid.sankey = {
     width: bottom_style.width,
 }
 
-const graphsize = [-30, -10, -10, -5, -5];
-const groups = [1, 2, 3, 4, 5];
+const graphsize = [-30, -10, -10, -5, -5, -8, -8]
+const groups = [1, 2, 3, 4, 5, 6, 7]
 
 
 let graph_params = {
